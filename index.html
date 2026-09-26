@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>SIXTEEN MART — Always More Value | Official Store</title>
+    <meta name="description" content="Always More Value. Discover affordable, functional and trendy lifestyle products carefully selected for your everyday convenience and comfort.">
+
+    <!-- Anti-FOUC Theme Pre-loader: Strictly Defaults to Daylight (Light) Theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('sixteen_mart_theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Modular Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER & COMPACT NAVIGATION BAR
+    ========================================================= -->
+    <header>
+        <div class="header-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo-link" aria-label="SIXTEEN MART Home">
+                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="logo">
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="mainNav" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+
+                <!-- All Products Dropdown Menu -->
+                <div class="dropdown" id="productsDropdown">
+                    <a href="products.html" class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        All Products
+                        <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                    <div class="dropdown-menu" role="menu">
+                        <!-- Home Accessories Submenu -->
+                        <div class="category-dropdown" id="homeDropdown">
+                            <a href="products.html?category=home" role="menuitem">
+                                <span>Home Accessories</span>
+                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <div class="product-submenu" role="menu">
+                                <a href="products.html?search=Milk+Frother" role="menuitem">Electric Handheld Milk Frother</a>
+                                <a href="products.html?search=Thermal+Printer" role="menuitem">Mini Portable Pocket Thermal Printer</a>
+                                <a href="products.html?search=Juice+Blender" role="menuitem">Portable Rechargeable Juice Blender</a>
+                                <a href="products.html?search=Aroma+Diffuser" role="menuitem">Ultrasonic Aroma Diffuser</a>
+                            </div>
+                        </div>
+
+                        <!-- Beauty Accessories Submenu -->
+                        <div class="category-dropdown" id="beautyDropdown">
+                            <a href="products.html?category=beauty" role="menuitem">
+                                <span>Beauty Accessories</span>
+                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <div class="product-submenu" role="menu">
+                                <a href="products.html?search=Hot+Air+Styler" role="menuitem">5-in-1 Hot Air Styler</a>
+                                <a href="products.html?search=Jade+Roller" role="menuitem">Jade Roller & Gua Sha Set</a>
+                                <a href="products.html?search=Spa+Gel+Socks" role="menuitem">Moisturizing Pink Spa Gel Socks</a>
+                                <a href="products.html?search=Face+Vacuum" role="menuitem">Face Vacuum Pore Cleanser</a>
+                                <a href="products.html?search=Derma+Roller" role="menuitem">Derma Roller Micro-Needle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </nav>
+
+            <!-- Header Actions: Search & Day/Night Theme Switcher -->
+            <div class="header-actions">
+                <div class="search-box" role="search">
+                    <input type="text" id="globalSearchInput" placeholder="Search products..." autocomplete="off" aria-label="Search products">
+                    <button type="button" class="search-btn" aria-label="Submit search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Switch theme" title="Toggle Light / Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========================================================
+             HERO SECTION — 5-SLIDE FULL-BLEED SLIDER (REFERENCE PATTERN)
+        ========================================================= -->
+        <section class="hero" id="home">
+            <div class="hero-slider" id="heroSlider">
+                <!-- Slide 1: Shop all products (Catalog) -->
+                <div class="hero-slide active">
+                    <div class="hero-art">
+                        <img src="images/web-banner-1.jpg" alt="SIXTEEN MART - Shop All Products">
+                    </div>
+                    <a href="products.html" class="hero-shop-hotspot" aria-label="Shop all products"></a>
+                </div>
+
+                <!-- Slide 2: Electric Handheld Milk Frother -->
+                <div class="hero-slide">
+                    <div class="hero-art">
+                        <img src="images/web-banner-2.jpg" alt="Electric Handheld Milk Frother" loading="lazy">
+                    </div>
+                    <a href="products.html?search=Milk+Frother" class="hero-shop-hotspot" aria-label="Shop Milk Frother"></a>
+                </div>
+
+                <!-- Slide 3: Jade Roller & Gua Sha Set -->
+                <div class="hero-slide">
+                    <div class="hero-art">
+                        <img src="images/web-banner-3.jpg" alt="Jade Roller & Gua Sha Set" loading="lazy">
+                    </div>
+                    <a href="products.html?search=Jade+Roller" class="hero-shop-hotspot" aria-label="Shop Jade Roller & Gua Sha Set"></a>
+                </div>
+
+                <!-- Slide 4: Derma Roller Micro-Needle -->
+                <div class="hero-slide">
+                    <div class="hero-art">
+                        <img src="images/web-banner-4.jpg" alt="Derma Roller Micro-Needle" loading="lazy">
+                    </div>
+                    <a href="products.html?search=Derma+Roller" class="hero-shop-hotspot" aria-label="Shop Derma Roller Micro-Needle"></a>
+                </div>
+
+                <!-- Slide 5: Entire Product Category (Home & Beauty Accessories) -->
+                <div class="hero-slide">
+                    <div class="hero-art">
+                        <img src="images/web-banner-5.jpg" alt="Home & Beauty Accessories - 16 Mart" loading="lazy">
+                    </div>
+                    <a href="products.html" class="hero-shop-hotspot" aria-label="Shop Home & Beauty Accessories"></a>
+                </div>
+            </div>
+
+            <!-- Arrow Navigation Controls -->
+            <button type="button" class="hero-arrow prev" id="heroPrevBtn" aria-label="Previous slide" onclick="previousHeroSlide()">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" class="hero-arrow next" id="heroNextBtn" aria-label="Next slide" onclick="nextHeroSlide()">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="hero-dots" id="heroDots" aria-label="Hero slide navigation">
+                <button type="button" class="hero-dot active" aria-label="Slide 1" onclick="showHeroSlide(0)"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 2" onclick="showHeroSlide(1)"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 3" onclick="showHeroSlide(2)"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 4" onclick="showHeroSlide(3)"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 5" onclick="showHeroSlide(4)"></button>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             CATEGORIES SECTION
+        ========================================================= -->
+        <section class="section" id="categories">
+            <div class="section-title">
+                <h2>Shop by Category</h2>
+                <p>Discover products handpicked to make everyday life easier, smarter, and more enjoyable.</p>
+            </div>
+
+            <div class="category-grid">
+                <!-- Home Accessories -->
+                <a href="products.html?category=home" class="category-card" aria-label="Explore Home Accessories collection">
+                    <img src="images/home-accessories.jpg" alt="Home Accessories Collection" loading="lazy">
+                    <div class="category-overlay">
+                        <h3>Home Accessories</h3>
+                        <p>Functional finds for a smarter, cleaner, and more comfortable home.</p>
+                    </div>
+                </a>
+
+                <!-- Beauty Accessories -->
+                <a href="products.html?category=beauty" class="category-card" aria-label="Explore Beauty Accessories collection">
+                    <img src="images/beauty-accessories.jpg" alt="Beauty Accessories Collection" loading="lazy">
+                    <div class="category-overlay">
+                        <h3>Beauty Accessories</h3>
+                        <p>Simple beauty essentials and self-care tools for your daily routine.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             FEATURED PRODUCT SHOWCASE
+        ========================================================= -->
+        <section class="section products-section" id="featuredProducts">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Smart products. Better value. Everyday convenience with fast WhatsApp ordering.</p>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <!-- Product 1: Hot Air Styler -->
+                <article class="product-card" data-product-id="hot-air-styler" data-category="beauty" data-name="5-in-1 Hot Air Styler Hair Dryer Curling Wand Set" role="button" tabindex="0" aria-label="View 5-in-1 Hot Air Styler">
+                    <span class="product-badge">Bestseller</span>
+                    <span class="product-quick-view-badge"><i class="fa-solid fa-eye"></i> Quick View</span>
+                    <div class="product-image-container">
+                        <img class="product-img" src="images/hot-air-styler-1.jpg" alt="5-in-1 Hot Air Styler Hair Dryer Curling Wand Set" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i></span>
+                            <span>4.8 (38)</span>
+                        </div>
+                        <h3>5-in-1 Hot Air Styler Hair Dryer Curling Wand Set</h3>
+                        <p class="product-description">A versatile 5-in-1 hot air styling tool for rapid drying, volumizing, and curling salon styles at home.</p>
+                        <div class="product-bottom">
+                            <span class="price">Rs. 4,990</span>
+                            <a class="order-btn" href="#" aria-label="Order 5-in-1 Hot Air Styler">
+                                <span>Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2: Milk Frother -->
+                <article class="product-card" data-product-id="milk-frother" data-category="home" data-name="Electric Handheld Milk Frother" role="button" tabindex="0" aria-label="View Electric Handheld Milk Frother">
+                    <span class="product-badge">Trending</span>
+                    <span class="product-quick-view-badge"><i class="fa-solid fa-eye"></i> Quick View</span>
+                    <div class="product-image-container">
+                        <img class="product-img" src="images/milk-frother-1.jpg" alt="Electric Handheld Milk Frother" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i></span>
+                            <span>4.6 (42)</span>
+                        </div>
+                        <h3>Electric Handheld Milk Frother</h3>
+                        <p class="product-description">Quickly create rich, velvety micro-foam for gourmet coffee, lattes, and cappuccinos in seconds.</p>
+                        <div class="product-bottom">
+                            <span class="price">Rs. 1,490</span>
+                            <a class="order-btn" href="#" aria-label="Order Electric Handheld Milk Frother">
+                                <span>Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3: Face Vacuum (NEW) -->
+                <article class="product-card" data-product-id="face-vacuum" data-category="beauty" data-name="Face Vacuum Pore Cleanser (Derma Suction)" role="button" tabindex="0" aria-label="View Face Vacuum Pore Cleanser">
+                    <span class="product-badge">New Arrival</span>
+                    <span class="product-quick-view-badge"><i class="fa-solid fa-eye"></i> Quick View</span>
+                    <div class="product-image-container">
+                        <img class="product-img" src="images/derma-suction-1.png" alt="Face Vacuum Pore Cleanser Derma Suction" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i></span>
+                            <span>4.6 (19)</span>
+                        </div>
+                        <h3>Face Vacuum Pore Cleanser (Derma Suction)</h3>
+                        <p class="product-description">Powerful yet gentle suction pore-cleaning device with interchangeable probe heads to remove blackheads.</p>
+                        <div class="product-bottom">
+                            <span class="price">Rs. 1,500</span>
+                            <a class="order-btn" href="#" aria-label="Order Face Vacuum Pore Cleanser">
+                                <span>Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4: Thermal Printer -->
+                <article class="product-card" data-product-id="thermal-printer" data-category="home" data-name="Mini Portable Pocket Thermal Printer" role="button" tabindex="0" aria-label="View Mini Portable Pocket Thermal Printer">
+                    <span class="product-badge">Favorite</span>
+                    <span class="product-quick-view-badge"><i class="fa-solid fa-eye"></i> Quick View</span>
+                    <div class="product-image-container">
+                        <img class="product-img" src="images/thermal-printer-1.jpg" alt="Mini Portable Pocket Thermal Printer" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i></span>
+                            <span>4.7 (51)</span>
+                        </div>
+                        <h3>Mini Portable Pocket Thermal Printer</h3>
+                        <p class="product-description">Inkless, compact wireless pocket printer for instant study notes, labels, checklists, and fun stickers.</p>
+                        <div class="product-bottom">
+                            <span class="price">Rs. 3,490</span>
+                            <a class="order-btn" href="#" aria-label="Order Mini Portable Pocket Thermal Printer">
+                                <span>Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 5: Derma Roller (NEW) -->
+                <article class="product-card" data-product-id="derma-roller" data-category="beauty" data-name="Derma Roller Micro-Needle Therapy System" role="button" tabindex="0" aria-label="View Derma Roller Micro-Needle Therapy System">
+                    <span class="product-badge">New Arrival</span>
+                    <span class="product-quick-view-badge"><i class="fa-solid fa-eye"></i> Quick View</span>
+                    <div class="product-image-container">
+                        <img class="product-img" src="images/derma-roller-1.png" alt="Derma Roller Micro-Needle Therapy System" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i></span>
+                            <span>4.7 (23)</span>
+                        </div>
+                        <h3>Derma Roller Micro-Needle System</h3>
+                        <p class="product-description">Precision titanium micro-needle roller designed to stimulate collagen regeneration and improve serum absorption.</p>
+                        <div class="product-bottom">
+                            <span class="price">Rs. 750</span>
+                            <a class="order-btn" href="#" aria-label="Order Derma Roller Micro-Needle System">
+                                <span>Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 6: Aroma Diffuser (NEW) -->
+                <article class="product-card" data-product-id="aroma-diffuser" data-category="home" data-name="Ultrasonic Aroma Diffuser & Air Humidifier" role="button" tabindex="0" aria-label="View Ultrasonic Aroma Diffuser & Air Humidifier">
+                    <span class="product-badge">New Arrival</span>
+                    <span class="product-quick-view-badge"><i class="fa-solid fa-eye"></i> Quick View</span>
+                    <div class="product-image-container">
+                        <img class="product-img" src="images/aroma-diffuser-1.jpg" alt="Ultrasonic Aroma Diffuser and Air Humidifier" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i></span>
+                            <span>4.8 (31)</span>
+                        </div>
+                        <h3>Ultrasonic Aroma Diffuser & Humidifier</h3>
+                        <p class="product-description">Whisper-quiet ultrasonic mist diffuser with multi-color ambient LED mood lighting for home and bedroom.</p>
+                        <div class="product-bottom">
+                            <span class="price">Rs. 2,850</span>
+                            <a class="order-btn" href="#" aria-label="Order Ultrasonic Aroma Diffuser">
+                                <span>Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- View All Products CTA -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="products.html" class="btn btn-secondary">
+                    <span>Explore Full Catalog (9 Products)</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             CONCEPT / WHY SIXTEEN MART
+        ========================================================= -->
+        <section class="concept">
+            <div class="concept-grid">
+                <div class="concept-box">
+                    <div class="concept-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>16 Founders</h3>
+                    <p>Sixteen collective ideas coming together to build one customer-first lifestyle store.</p>
+                </div>
+                <div class="concept-box">
+                    <div class="concept-icon"><i class="fa-solid fa-tag"></i></div>
+                    <h3>Fair & Affordable</h3>
+                    <p>Carefully sourced everyday products at prices that offer genuine, lasting value.</p>
+                </div>
+                <div class="concept-box">
+                    <div class="concept-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Functional & Trendy</h3>
+                    <p>Practical accessories engineered to fit seamlessly into modern daily lifestyles.</p>
+                </div>
+                <div class="concept-box">
+                    <div class="concept-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <h3>Direct Social Ordering</h3>
+                    <p>Zero complicated checkouts — browse, connect, and confirm your order directly via WhatsApp.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+    <footer>
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-column">
+                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="footer-logo">
+                <p class="footer-tagline">Always More Value.</p>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="products.html">All Products</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="faq.html">FAQ</a></p>
+            </div>
+
+            <!-- Contact & Social Column -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p class="contact-description">Connect with SIXTEEN MART through our active social media pages.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1FCNRuqKVa/?mibextid=wwXIfr" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_16.mart_onlinestore?stkn=MWQ0cXRsaTF0YXIxNw==" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sixteenmart1?_r=1&_t=ZS-99h4W7jognR" class="social-link tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20an%20inquiry." class="social-link whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (+94 76 805 6036)" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 SIXTEEN MART. All Rights Reserved. Always More Value.
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20am%20interested%20in%20your%20products." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (+94 76 805 6036)" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Dependencies -->
+    <script src="js/theme.js"></script>
+    <script src="js/products-data.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

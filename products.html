@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>All Products — SIXTEEN MART | Home & Beauty Accessories</title>
+    <meta name="description" content="Explore the complete collection of home accessories and beauty accessories from SIXTEEN MART. High quality, affordable everyday essentials with WhatsApp ordering.">
+
+    <!-- Anti-FOUC Theme Pre-loader: Strictly Defaults to Daylight (Light) Theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('sixteen_mart_theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Modular Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER & COMPACT NAVIGATION BAR
+    ========================================================= -->
+    <header>
+        <div class="header-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo-link" aria-label="SIXTEEN MART Home">
+                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="logo">
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="mainNav" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+
+                <!-- All Products Dropdown Menu -->
+                <div class="dropdown" id="productsDropdown">
+                    <a href="products.html" class="nav-link active dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-current="page">
+                        All Products
+                        <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                    <div class="dropdown-menu" role="menu">
+                        <!-- Home Accessories Submenu -->
+                        <div class="category-dropdown" id="homeDropdown">
+                            <a href="products.html?category=home" role="menuitem">
+                                <span>Home Accessories</span>
+                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <div class="product-submenu" role="menu">
+                                <a href="products.html?search=Milk+Frother" role="menuitem">Electric Handheld Milk Frother</a>
+                                <a href="products.html?search=Thermal+Printer" role="menuitem">Mini Portable Pocket Thermal Printer</a>
+                                <a href="products.html?search=Juice+Blender" role="menuitem">Portable Rechargeable Juice Blender</a>
+                                <a href="products.html?search=Aroma+Diffuser" role="menuitem">Ultrasonic Aroma Diffuser</a>
+                            </div>
+                        </div>
+
+                        <!-- Beauty Accessories Submenu -->
+                        <div class="category-dropdown" id="beautyDropdown">
+                            <a href="products.html?category=beauty" role="menuitem">
+                                <span>Beauty Accessories</span>
+                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <div class="product-submenu" role="menu">
+                                <a href="products.html?search=Hot+Air+Styler" role="menuitem">5-in-1 Hot Air Styler</a>
+                                <a href="products.html?search=Jade+Roller" role="menuitem">Jade Roller & Gua Sha Set</a>
+                                <a href="products.html?search=Spa+Gel+Socks" role="menuitem">Moisturizing Pink Spa Gel Socks</a>
+                                <a href="products.html?search=Face+Vacuum" role="menuitem">Face Vacuum Pore Cleanser</a>
+                                <a href="products.html?search=Derma+Roller" role="menuitem">Derma Roller Micro-Needle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </nav>
+
+            <!-- Header Actions: Search & Day/Night Theme Switcher -->
+            <div class="header-actions">
+                <div class="search-box" role="search">
+                    <input type="text" id="globalSearchInput" placeholder="Search products..." autocomplete="off" aria-label="Search products">
+                    <button type="button" class="search-btn" aria-label="Submit search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Switch theme" title="Toggle Light / Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========================================================
+             PAGE HERO
+        ========================================================= -->
+        <section class="page-hero">
+            <h1>Our Complete Collection</h1>
+            <p>Explore functional home accessories and simple beauty essentials curated for quality, style, and everyday value.</p>
+        </section>
+
+        <!-- =========================================================
+             CATALOG TOOLBAR & PRODUCT GRID
+        ========================================================= -->
+        <section class="section">
+            <!-- Toolbar: Category Filter Tabs, Live Search & Sorting -->
+            <div class="catalog-toolbar">
+                <div class="filter-tabs" role="tablist" aria-label="Filter products by category">
+                    <button type="button" class="filter-tab active" data-category="all" role="tab" aria-selected="true">
+                        All Products
+                    </button>
+                    <button type="button" class="filter-tab" data-category="home" role="tab" aria-selected="false">
+                        <i class="fa-solid fa-house" style="margin-right: 4px; font-size: 11px;"></i> Home Accessories
+                    </button>
+                    <button type="button" class="filter-tab" data-category="beauty" role="tab" aria-selected="false">
+                        <i class="fa-solid fa-spa" style="margin-right: 4px; font-size: 11px;"></i> Beauty Accessories
+                    </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                    <div class="search-box" style="width: 190px;">
+                        <input type="text" id="catalogSearchInput" placeholder="Filter in catalog..." autocomplete="off" aria-label="Filter products">
+                        <button type="button" class="search-btn" aria-label="Filter">
+                            <i class="fa-solid fa-filter"></i>
+                        </button>
+                    </div>
+
+                    <div class="sort-select-wrapper">
+                        <label for="catalogSortSelect">Sort by:</label>
+                        <select id="catalogSortSelect" class="sort-select" aria-label="Sort products">
+                            <option value="featured">Featured / Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Count Header -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding: 0 4px;">
+                <p style="font-size: 13.5px; color: var(--muted); font-weight: 500;">
+                    Showing <strong id="catalogResultCount" style="color: var(--dark-brown);">9 items</strong>
+                    <span id="searchQueryEcho" style="display: none; color: var(--coral); margin-left: 6px;"></span>
+                </p>
+                <p style="font-size: 12px; color: var(--muted);">
+                    <i class="fa-solid fa-circle-info" style="margin-right: 4px;"></i> Click any item for Quick View & WhatsApp ordering
+                </p>
+            </div>
+
+            <!-- Dynamic Product Grid -->
+            <div class="product-grid" id="catalogGrid">
+                <!-- Populated dynamically via js/catalog.js from js/products-data.js -->
+            </div>
+
+            <!-- Zero Results Message -->
+            <div class="no-results" id="catalogNoResults" style="display: none;">
+                <div style="font-size: 48px; color: var(--coral); margin-bottom: 14px;"><i class="fa-solid fa-box-open"></i></div>
+                <h3>No Matching Products Found</h3>
+                <p>We couldn't find any products matching your current search or filter criteria.</p>
+                <button type="button" class="btn btn-secondary" id="resetSearchBtn" style="margin-top: 18px;">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span>Reset All Filters</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             ORDERING ASSISTANCE BANNER
+        ========================================================= -->
+        <section class="section" style="padding-top: 0;">
+            <div style="background: linear-gradient(135deg, var(--white) 0%, var(--surface-alt) 100%); border: 2px dashed var(--card-border); border-radius: var(--radius-lg); padding: 32px 24px; text-align: center;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; color: var(--dark-brown); margin-bottom: 8px;">Looking for something specific?</h3>
+                <p style="color: var(--muted); font-size: 13.5px; max-width: 520px; margin: 0 auto 20px;">
+                    Can't find what you're looking for or want to inquire about upcoming stock? Send us a message on WhatsApp and our team will be delighted to assist.
+                </p>
+                <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20am%20looking%20for%20a%20product%20inquiry." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Inquire via WhatsApp</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+    <footer>
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-column">
+                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="footer-logo">
+                <p class="footer-tagline">Always More Value.</p>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="products.html">All Products</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="faq.html">FAQ</a></p>
+            </div>
+
+            <!-- Contact & Social Column -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p class="contact-description">Connect with SIXTEEN MART through our active social media pages.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1FCNRuqKVa/?mibextid=wwXIfr" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_16.mart_onlinestore?stkn=MWQ0cXRsaTF0YXIxNw==" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sixteenmart1?_r=1&_t=ZS-99h4W7jognR" class="social-link tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20an%20inquiry." class="social-link whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (+94 76 805 6036)" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 SIXTEEN MART. All Rights Reserved. Always More Value.
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20a%20question%20about%20your%20products." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (+94 76 805 6036)" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Dependencies -->
+    <script src="js/theme.js"></script>
+    <script src="js/products-data.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

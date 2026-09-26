@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contact Us — SIXTEEN MART | WhatsApp Orders & Inquiries</title>
+    <meta name="description" content="Get in touch with SIXTEEN MART. Reach out directly via WhatsApp, Instagram, Facebook, or TikTok for orders, delivery questions, and customer support.">
+
+    <!-- Anti-FOUC Theme Pre-loader: Strictly Defaults to Daylight (Light) Theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('sixteen_mart_theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Modular Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER & COMPACT NAVIGATION BAR
+    ========================================================= -->
+    <header>
+        <div class="header-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo-link" aria-label="SIXTEEN MART Home">
+                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="logo">
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="mainNav" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+
+                <!-- All Products Dropdown Menu -->
+                <div class="dropdown" id="productsDropdown">
+                    <a href="products.html" class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        All Products
+                        <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                    <div class="dropdown-menu" role="menu">
+                        <!-- Home Accessories Submenu -->
+                        <div class="category-dropdown" id="homeDropdown">
+                            <a href="products.html?category=home" role="menuitem">
+                                <span>Home Accessories</span>
+                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <div class="product-submenu" role="menu">
+                                <a href="products.html?search=Milk+Frother" role="menuitem">Electric Handheld Milk Frother</a>
+                                <a href="products.html?search=Thermal+Printer" role="menuitem">Mini Portable Pocket Thermal Printer</a>
+                                <a href="products.html?search=Juice+Blender" role="menuitem">Portable Rechargeable Juice Blender</a>
+                                <a href="products.html?search=Aroma+Diffuser" role="menuitem">Ultrasonic Aroma Diffuser</a>
+                            </div>
+                        </div>
+
+                        <!-- Beauty Accessories Submenu -->
+                        <div class="category-dropdown" id="beautyDropdown">
+                            <a href="products.html?category=beauty" role="menuitem">
+                                <span>Beauty Accessories</span>
+                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <div class="product-submenu" role="menu">
+                                <a href="products.html?search=Hot+Air+Styler" role="menuitem">5-in-1 Hot Air Styler</a>
+                                <a href="products.html?search=Jade+Roller" role="menuitem">Jade Roller & Gua Sha Set</a>
+                                <a href="products.html?search=Spa+Gel+Socks" role="menuitem">Moisturizing Pink Spa Gel Socks</a>
+                                <a href="products.html?search=Face+Vacuum" role="menuitem">Face Vacuum Pore Cleanser</a>
+                                <a href="products.html?search=Derma+Roller" role="menuitem">Derma Roller Micro-Needle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="nav-link active" aria-current="page">Contact Us</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </nav>
+
+            <!-- Header Actions: Search & Day/Night Theme Switcher -->
+            <div class="header-actions">
+                <div class="search-box" role="search">
+                    <input type="text" id="globalSearchInput" placeholder="Search products..." autocomplete="off" aria-label="Search products">
+                    <button type="button" class="search-btn" aria-label="Submit search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Switch theme" title="Toggle Light / Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========================================================
+             PAGE HERO
+        ========================================================= -->
+        <section class="page-hero">
+            <h1>Contact SIXTEEN MART</h1>
+            <p>We are here to help! Whether you want to place an order, inquire about stock, or check delivery details, connect directly with our friendly team.</p>
+        </section>
+
+        <!-- =========================================================
+             CONTACT GRID & WHATSAPP GENERATOR
+        ========================================================= -->
+        <section class="section">
+            <div class="contact-grid">
+                <!-- Left Column: Direct Support Channels -->
+                <div class="contact-info-card">
+                    <h2>Get in Touch</h2>
+                    <p>
+                        As an agile online lifestyle brand, all our customer interactions and orders are handled directly through social platforms and WhatsApp. This ensures you get immediate, personal assistance without robotic delays.
+                    </p>
+
+                    <div class="contact-methods">
+                        <!-- WhatsApp Direct -->
+                        <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="contact-method-item" aria-label="Chat on WhatsApp (+94 76 805 6036)">
+                            <div class="contact-method-icon whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">Direct WhatsApp Hotline</div>
+                                <div class="contact-method-value">+94 76 805 6036</div>
+                            </div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/_16.mart_onlinestore?stkn=MWQ0cXRsaTF0YXIxNw==" target="_blank" rel="noopener noreferrer" class="contact-method-item" aria-label="Visit Instagram">
+                            <div class="contact-method-icon" style="background:#E4405F; color:#FFFFFF;">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">Instagram Store</div>
+                                <div class="contact-method-value">@_16.mart_onlinestore</div>
+                            </div>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1FCNRuqKVa/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="contact-method-item" aria-label="Visit Facebook">
+                            <div class="contact-method-icon" style="background:#1877F2; color:#FFFFFF;">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">Facebook Page</div>
+                                <div class="contact-method-value">SIXTEEN MART Official</div>
+                            </div>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@sixteenmart1?_r=1&_t=ZS-99h4W7jognR" target="_blank" rel="noopener noreferrer" class="contact-method-item" aria-label="Visit TikTok">
+                            <div class="contact-method-icon" style="background:#000000; color:#FFFFFF;">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">TikTok Channel</div>
+                                <div class="contact-method-value">@sixteenmart1</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Operating Hours & Delivery Policy -->
+                    <div style="background: var(--surface-alt); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+                        <h4 style="font-size: 13.5px; color: var(--dark-brown); margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-regular fa-clock" style="color: var(--coral);"></i> Customer Care Hours
+                        </h4>
+                        <p style="font-size: 12.5px; color: var(--muted); margin-bottom: 12px; line-height: 1.5;">
+                            Monday – Sunday: 9:00 AM – 10:00 PM<br>
+                            Typically responds within 15 to 30 minutes on WhatsApp!
+                        </p>
+                        <h4 style="font-size: 13.5px; color: var(--dark-brown); margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-solid fa-truck" style="color: var(--coral);"></i> Delivery Coverage
+                        </h4>
+                        <p style="font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.5;">
+                            Islandwide door-to-door courier dispatch across all districts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive WhatsApp Inquiry Form -->
+                <div class="contact-form-card">
+                    <h3>Send a Direct Message</h3>
+                    <p>Fill out the details below and we will automatically open WhatsApp with your pre-filled inquiry ready to send.</p>
+
+                    <form id="contactWhatsAppForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" class="form-control" placeholder="e.g. Anuki Perera" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactTopic">Inquiry Category *</label>
+                            <select id="contactTopic" class="form-control" required>
+                                <option value="General Product Inquiry">General Product Inquiry</option>
+                                <option value="Order: 5-in-1 Hot Air Styler">Order: 5-in-1 Hot Air Styler (Rs. 4,990)</option>
+                                <option value="Order: Electric Handheld Milk Frother">Order: Electric Handheld Milk Frother (Rs. 1,490)</option>
+                                <option value="Order: Face Vacuum Pore Cleanser">Order: Face Vacuum Pore Cleanser (Rs. 1,500)</option>
+                                <option value="Order: Derma Roller Micro-Needle">Order: Derma Roller (Rs. 750)</option>
+                                <option value="Order: Ultrasonic Aroma Diffuser">Order: Ultrasonic Aroma Diffuser (Rs. 2,850)</option>
+                                <option value="Order: Jade Roller & Gua Sha Set">Order: Jade Roller & Gua Sha Set (Rs. 2,490)</option>
+                                <option value="Order: Mini Pocket Thermal Printer">Order: Mini Pocket Thermal Printer (Rs. 3,490)</option>
+                                <option value="Order: Moisturizing Pink Spa Socks">Order: Moisturizing Pink Spa Socks (Rs. 1,290)</option>
+                                <option value="Order: Portable Rechargeable Blender">Order: Portable Rechargeable Blender (Rs. 3,490)</option>
+                                <option value="Delivery Status / Tracking">Delivery Status / Tracking</option>
+                                <option value="Bulk Order Inquiry">Bulk / Gift Order Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message / Delivery Location *</label>
+                            <textarea id="contactMessage" class="form-control" placeholder="Tell us your questions, desired delivery area, or how we can assist you..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-whatsapp" style="width: 100%; border-radius: var(--radius-md); font-size: 14.5px;">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 18px;"></i>
+                            <span>Open in WhatsApp</span>
+                        </button>
+
+                        <p style="font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 12px; margin-bottom: 0;">
+                            <i class="fa-solid fa-lock" style="margin-right: 4px;"></i> Opens WhatsApp Web or your phone app directly. No spam guaranteed.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+    <footer>
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-column">
+                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="footer-logo">
+                <p class="footer-tagline">Always More Value.</p>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="products.html">All Products</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="faq.html">FAQ</a></p>
+            </div>
+
+            <!-- Contact & Social Column -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p class="contact-description">Connect with SIXTEEN MART through our active social media pages.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1FCNRuqKVa/?mibextid=wwXIfr" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_16.mart_onlinestore?stkn=MWQ0cXRsaTF0YXIxNw==" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sixteenmart1?_r=1&_t=ZS-99h4W7jognR" class="social-link tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20an%20inquiry." class="social-link whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (+94 76 805 6036)" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 SIXTEEN MART. All Rights Reserved. Always More Value.
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20a%20question." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (+94 76 805 6036)" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Dependencies -->
+    <script src="js/theme.js"></script>
+    <script src="js/products-data.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

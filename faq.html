@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Frequently Asked Questions (FAQ) — SIXTEEN MART</title>
+    <meta name="description" content="Got questions about ordering, WhatsApp checkout, delivery timelines, or payment methods? Find all your answers in the SIXTEEN MART FAQ.">
+
+    <!-- Anti-FOUC Theme Pre-loader: Strictly Defaults to Daylight (Light) Theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('sixteen_mart_theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Modular Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER & COMPACT NAVIGATION BAR
+    ========================================================= -->
+    <header>
+        <div class="header-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo-link" aria-label="SIXTEEN MART Home">
+                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="logo">
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="mainNav" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+
+                <!-- All Products Dropdown Menu -->
+                <div class="dropdown" id="productsDropdown">
+                    <a href="products.html" class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        All Products
+                        <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                    <div class="dropdown-menu" role="menu">
+                        <!-- Home Accessories Submenu -->
+                        <div class="category-dropdown" id="homeDropdown">
+                            <a href="products.html?category=home" role="menuitem">
+                                <span>Home Accessories</span>
+                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <div class="product-submenu" role="menu">
+                                <a href="products.html?search=Milk+Frother" role="menuitem">Electric Handheld Milk Frother</a>
+                                <a href="products.html?search=Thermal+Printer" role="menuitem">Mini Portable Pocket Thermal Printer</a>
+                                <a href="products.html?search=Juice+Blender" role="menuitem">Portable Rechargeable Juice Blender</a>
+                                <a href="products.html?search=Aroma+Diffuser" role="menuitem">Ultrasonic Aroma Diffuser</a>
+                            </div>
+                        </div>
+
+                        <!-- Beauty Accessories Submenu -->
+                        <div class="category-dropdown" id="beautyDropdown">
+                            <a href="products.html?category=beauty" role="menuitem">
+                                <span>Beauty Accessories</span>
+                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <div class="product-submenu" role="menu">
+                                <a href="products.html?search=Hot+Air+Styler" role="menuitem">5-in-1 Hot Air Styler</a>
+                                <a href="products.html?search=Jade+Roller" role="menuitem">Jade Roller & Gua Sha Set</a>
+                                <a href="products.html?search=Spa+Gel+Socks" role="menuitem">Moisturizing Pink Spa Gel Socks</a>
+                                <a href="products.html?search=Face+Vacuum" role="menuitem">Face Vacuum Pore Cleanser</a>
+                                <a href="products.html?search=Derma+Roller" role="menuitem">Derma Roller Micro-Needle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="faq.html" class="nav-link active" aria-current="page">FAQ</a>
+            </nav>
+
+            <!-- Header Actions: Search & Day/Night Theme Switcher -->
+            <div class="header-actions">
+                <div class="search-box" role="search">
+                    <input type="text" id="globalSearchInput" placeholder="Search products..." autocomplete="off" aria-label="Search products">
+                    <button type="button" class="search-btn" aria-label="Submit search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Switch theme" title="Toggle Light / Dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========================================================
+             PAGE HERO
+        ========================================================= -->
+        <section class="page-hero">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about our products, direct WhatsApp ordering process, payment options, and islandwide delivery.</p>
+        </section>
+
+        <!-- =========================================================
+             ACCORDION FAQ CONTENT
+        ========================================================= -->
+        <section class="section">
+            <div class="faq-container">
+                <!-- Ordering Category -->
+                <h2 class="faq-category-title">
+                    <i class="fa-brands fa-whatsapp" style="color:#25D366; margin-right:8px;"></i>
+                    Ordering via WhatsApp
+                </h2>
+
+                <details open>
+                    <summary>How can I place an order with SIXTEEN MART?</summary>
+                    <p>
+                        Ordering is simple, fast, and secure. Simply browse our website, click on any product card to open the <strong>Quick View</strong> pop-up, choose your desired quantity (1 to 5 units), and click <strong>"Order Now via WhatsApp"</strong>. This generates a pre-formatted message with your chosen item and quantity, and opens WhatsApp directly so our team can immediately confirm your delivery address.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Why do you use WhatsApp instead of a standard checkout cart?</summary>
+                    <p>
+                        As a new growing lifestyle brand, WhatsApp ordering allows us to provide warm, personalized human customer service with zero checkout friction or complex account logins. You can ask questions about item specifications, confirm stock in real time, and receive live delivery tracking directly on your phone.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Can I order multiple different products in one message?</summary>
+                    <p>
+                        Yes, absolutely! When you click Order on any product, you can simply type any additional items you want into the WhatsApp chat before pressing send, or message us directly with your custom product list.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Why is quantity capped at 5 units per order?</summary>
+                    <p>
+                        Because our curated lifestyle products are imported in carefully controlled batches with limited stock, we cap quantities at 5 units per order to ensure fair availability for all customers. If you are interested in wholesale or bulk corporate gifts, please mention it to us in the chat!
+                    </p>
+                </details>
+
+                <!-- Shipping & Delivery Category -->
+                <h2 class="faq-category-title">
+                    <i class="fa-solid fa-truck-fast" style="color:var(--coral); margin-right:8px;"></i>
+                    Shipping & Islandwide Delivery
+                </h2>
+
+                <details>
+                    <summary>How long does delivery take?</summary>
+                    <p>
+                        Orders confirmed before 2:00 PM are dispatched on the same or next business day. Colombo and suburban areas typically arrive within <strong>1 to 2 business days</strong>. Outstation and provincial deliveries typically take <strong>2 to 4 business days</strong> via our trusted courier partners.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Do you deliver islandwide?</summary>
+                    <p>
+                        Yes! We deliver door-to-door to all districts and locations across the country. Our courier will call your provided contact number before arrival to coordinate drop-off.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>How much is the delivery charge?</summary>
+                    <p>
+                        Standard delivery is typically Rs. 350 – Rs. 450 depending on your delivery location and package weight. We frequently offer free delivery promotions on orders over Rs. 5,000 — ask our WhatsApp agent for ongoing specials!
+                    </p>
+                </details>
+
+                <!-- Payment Methods Category -->
+                <h2 class="faq-category-title">
+                    <i class="fa-solid fa-credit-card" style="color:var(--coral); margin-right:8px;"></i>
+                    Payment Options
+                </h2>
+
+                <details>
+                    <summary>What payment methods do you accept?</summary>
+                    <p>
+                        We accept:
+                        <br>1. <strong>Cash on Delivery (COD)</strong> — Pay comfortably when your package arrives at your doorstep.
+                        <br>2. <strong>Bank Transfer / Online Banking</strong> — Direct bank deposits or mobile banking transfers prior to dispatch.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Do I need a credit card to place an order?</summary>
+                    <p>
+                        No credit card is required! With Cash on Delivery and direct bank transfers, you can shop effortlessly without entering card details online.
+                    </p>
+                </details>
+
+                <!-- Quality & Returns Category -->
+                <h2 class="faq-category-title">
+                    <i class="fa-solid fa-shield-halved" style="color:var(--coral); margin-right:8px;"></i>
+                    Product Quality & Warranties
+                </h2>
+
+                <details>
+                    <summary>Are your products genuine and checked before shipping?</summary>
+                    <p>
+                        Yes. Each product in our catalog undergoes rigorous multi-point inspection by our 16 founding team members before packaging to verify motor functionality, charging cables, seal integrity, and aesthetic finish.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>What if my product arrives damaged or defective?</summary>
+                    <p>
+                        We take customer satisfaction seriously. If an item arrives defective or damaged during transit, notify us on WhatsApp with a short video or photo within <strong>48 hours</strong> of receiving the package. We will promptly arrange a free replacement or exchange.
+                    </p>
+                </details>
+            </div>
+
+            <!-- Still Have Questions Banner -->
+            <div style="text-align: center; margin-top: 50px; padding: 36px 20px; background: var(--surface-alt); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; color: var(--dark-brown); margin-bottom: 8px;">Still have questions?</h3>
+                <p style="color: var(--muted); font-size: 14px; max-width: 480px; margin: 0 auto 20px;">
+                    Our team is always online on WhatsApp to answer any specific questions about our catalog, stock, or delivery.
+                </p>
+                <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20a%20question%20that%20wasn't%20covered%20in%20the%20FAQ." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Ask Us on WhatsApp (+94 76 805 6036)</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+    <footer>
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-column">
+                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="footer-logo">
+                <p class="footer-tagline">Always More Value.</p>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="products.html">All Products</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="faq.html">FAQ</a></p>
+            </div>
+
+            <!-- Contact & Social Column -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p class="contact-description">Connect with SIXTEEN MART through our active social media pages.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1FCNRuqKVa/?mibextid=wwXIfr" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_16.mart_onlinestore?stkn=MWQ0cXRsaTF0YXIxNw==" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sixteenmart1?_r=1&_t=ZS-99h4W7jognR" class="social-link tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20an%20inquiry." class="social-link whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (+94 76 805 6036)" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 SIXTEEN MART. All Rights Reserved. Always More Value.
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20a%20question." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (+94 76 805 6036)" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Dependencies -->
+    <script src="js/theme.js"></script>
+    <script src="js/products-data.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
