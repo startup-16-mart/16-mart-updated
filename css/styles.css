@@ -2056,6 +2056,15 @@ footer {
 
     .header-container {
         padding: 6px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .logo-link {
+        order: 1;
+        margin-right: auto;
     }
 
     .logo {
@@ -2063,8 +2072,36 @@ footer {
         max-height: 48px;
     }
 
-    .mobile-menu-btn {
+    /* Header Actions: Theme toggle positioned immediately to the left of the menu icon */
+    .header-actions {
+        order: 2;
+        margin-left: auto;
         display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header-actions .search-box {
+        display: none;
+    }
+
+    .theme-toggle-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+        flex-shrink: 0;
+    }
+
+    /* Hamburger/menu icon positioned in the top-right corner */
+    .mobile-menu-btn {
+        order: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        margin-left: 8px;
+        flex-shrink: 0;
     }
 
     /* Mobile Nav Drawer */
@@ -2083,6 +2120,7 @@ footer {
         gap: 0;
         max-height: calc(100vh - 60px);
         overflow-y: auto;
+        z-index: 1100;
     }
 
     nav.mobile-open {
@@ -2149,13 +2187,19 @@ footer {
         display: block;
     }
 
-    .search-box {
-        width: 140px;
-        height: 34px;
-    }
-
     .category-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Category Cards on Mobile Viewport: Remove descriptive subtext/tagline */
+    .category-overlay p {
+        display: none !important;
+    }
+
+    .category-overlay h3 {
+        margin-bottom: 0;
+        font-size: clamp(20px, 5.5vw, 24px);
     }
 
     .hero-content h1 {
