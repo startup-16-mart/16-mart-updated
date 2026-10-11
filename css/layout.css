@@ -1,0 +1,718 @@
+/**
+ * SIXTEEN MART — Layout Styles
+ * Sticky Glass Header, Desktop & Mobile Navigation, Drawer, Footer, and Floating Mobile Tab Bar
+ */
+
+/* ==========================================================
+   STICKY GLASS NAVBAR
+   ========================================================== */
+.site-header-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  height: var(--nav-height);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-base), height var(--transition-base);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .site-header-navbar {
+    background: var(--surface);
+  }
+}
+
+.header-container {
+  max-width: var(--max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo Styling */
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 4px 0;
+}
+
+.logo-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--nav-height) - 10px);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.navbar-logo-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Light mode logo blend */
+[data-theme="light"] .navbar-logo-img {
+  mix-blend-mode: multiply;
+}
+
+/* Dark mode logo chip */
+[data-theme="dark"] .logo-chip {
+  background: #FFFFFF;
+  padding: 4px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================
+   DESKTOP NAVIGATION
+   ========================================================== */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links-list {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  padding: 8px 4px;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--brand-orange);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background-color: var(--brand-orange);
+  border-radius: 2px;
+}
+
+/* Dropdown on "All Products" */
+.nav-dropdown-item {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all var(--transition-base);
+  z-index: 600;
+}
+
+.nav-dropdown-item:hover .nav-dropdown-menu,
+.nav-dropdown-item:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.dropdown-link:hover,
+.dropdown-link:focus {
+  background-color: var(--brand-orange-soft);
+  color: var(--brand-orange-dark);
+}
+
+/* Desktop Actions: [Search] [Cart] [Sign In] [Theme] */
+.desktop-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-search-form {
+  position: relative;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-search-input {
+  width: 150px;
+  height: 40px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0 38px 0 16px;
+  font-size: 0.88rem;
+  transition: width var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.nav-search-input:focus {
+  width: 220px;
+  border-color: var(--brand-orange);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px rgba(255, 111, 89, 0.15);
+}
+
+.search-submit-btn {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.search-submit-btn:hover {
+  color: var(--brand-orange);
+}
+
+.navbar-icon-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--surface-subtle);
+  color: var(--text);
+  border: 1px solid var(--border);
+  transition: all var(--transition-fast);
+}
+
+.navbar-icon-btn:hover,
+.navbar-icon-btn.active {
+  background: var(--brand-orange-soft);
+  color: var(--brand-orange);
+  border-color: var(--brand-orange);
+}
+
+/* Cart badge count */
+.cart-badge-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: var(--radius-pill);
+  background-color: var(--brand-orange);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(255, 111, 89, 0.4);
+}
+
+.badge-bump {
+  animation: badgeBump 300ms ease;
+}
+
+@keyframes badgeBump {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+/* Theme toggle icon switcher */
+[data-theme="light"] .theme-icon-sun {
+  display: none;
+}
+[data-theme="light"] .theme-icon-moon {
+  display: block;
+}
+[data-theme="dark"] .theme-icon-sun {
+  display: block;
+}
+[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+
+/* Mobile actions (hidden by default on desktop) */
+.mobile-actions {
+  display: none;
+}
+
+/* ==========================================================
+   MOBILE BREAKPOINT (<= 900px)
+   ========================================================== */
+@media (max-width: 900px) {
+  body {
+    padding-bottom: 74px; /* Ensure floating bottom bar never covers content */
+  }
+
+  .site-header-navbar {
+    height: var(--nav-height-mobile);
+  }
+
+  .logo-chip {
+    height: calc(var(--nav-height-mobile) - 10px);
+  }
+
+  .desktop-nav,
+  .desktop-actions {
+    display: none !important;
+  }
+
+  /* Mobile Top Bar: [Logo] ... [Cart] [Theme toggle] [Hamburger] */
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hamburger-btn {
+    margin-left: 2px;
+  }
+}
+
+/* ==========================================================
+   MOBILE DRAWER PANEL
+   ========================================================== */
+.mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+  z-index: 1000;
+}
+
+.mobile-drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85%;
+  max-width: 340px;
+  height: 100%;
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(100%);
+  transition: transform var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px 24px;
+}
+
+.mobile-drawer-overlay.open .mobile-drawer-panel {
+  transform: translateX(0);
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.drawer-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.drawer-close-btn {
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text-muted);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--surface-subtle);
+}
+
+.drawer-close-btn:hover {
+  color: var(--brand-orange);
+}
+
+.drawer-search-form {
+  margin-bottom: 24px;
+}
+
+.drawer-search-input {
+  width: 100%;
+  height: 44px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0 42px 0 16px;
+  font-size: 0.95rem;
+}
+
+.drawer-search-input:focus {
+  border-color: var(--brand-orange);
+  background: var(--surface);
+}
+
+.drawer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.drawer-link {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 0;
+  color: var(--text);
+  border-bottom: 1px solid var(--border-light);
+  transition: color var(--transition-fast);
+}
+
+.drawer-link.active,
+.drawer-link:hover {
+  color: var(--brand-orange);
+}
+
+.drawer-accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 0;
+  color: var(--text);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.drawer-accordion-btn.active {
+  color: var(--brand-orange);
+}
+
+.drawer-sublinks-list {
+  display: none;
+  flex-direction: column;
+  padding-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+
+.drawer-sublinks-list.open {
+  display: flex;
+}
+
+.drawer-sublink {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 6px 0;
+}
+
+.drawer-sublink:hover {
+  color: var(--brand-orange);
+}
+
+/* ==========================================================
+   MOBILE FLOATING BOTTOM TAB BAR (<= 900px only)
+   ========================================================== */
+.mobile-bottom-tab-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 850;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--glass-border);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  padding: 6px 12px;
+  padding-bottom: max(6px, env(safe-area-inset-bottom));
+}
+
+@media (max-width: 900px) {
+  .mobile-bottom-tab-bar {
+    display: block;
+  }
+}
+
+.bottom-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.bottom-tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 12px;
+  min-width: 60px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.bottom-tab-btn span {
+  line-height: 1;
+}
+
+.bottom-tab-btn:hover,
+.bottom-tab-btn.active {
+  color: var(--brand-orange);
+}
+
+.bottom-tab-btn.active span {
+  font-weight: 700;
+}
+
+.bottom-tab-icon-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-tab-icon-wrap .cart-badge-count {
+  top: -6px;
+  right: -8px;
+}
+
+/* ==========================================================
+   DESKTOP FLOATING WHATSAPP BUTTON
+   ========================================================== */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 700;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.floating-whatsapp-btn:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+}
+
+@media (max-width: 900px) {
+  .floating-whatsapp-btn.desktop-only {
+    display: none !important;
+  }
+}
+
+/* ==========================================================
+   FOOTER (Dark Charcoal with Top Orange Line)
+   ========================================================== */
+.site-main-footer {
+  background-color: #1B1D22;
+  color: #E5E7EB;
+  position: relative;
+  margin-top: auto;
+}
+
+.footer-top-orange-line {
+  height: 3.5px;
+  background-color: var(--brand-orange);
+  width: 100%;
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 20px 24px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.footer-logo-chip {
+  display: inline-flex;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+}
+
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #9CA3AF;
+  margin-bottom: 20px;
+  max-width: 340px;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-circle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #374151;
+  color: #D1D5DB;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all var(--transition-fast);
+}
+
+.social-circle-btn:hover {
+  border-color: var(--brand-orange);
+  color: #FFFFFF;
+  background-color: var(--brand-orange);
+  transform: translateY(-2px);
+}
+
+.footer-col-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links-list a {
+  color: #9CA3AF;
+  font-size: 0.92rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-links-list a:hover {
+  color: var(--brand-orange);
+  padding-left: 2px;
+}
+
+.footer-order-text {
+  font-size: 0.95rem;
+  color: #9CA3AF;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.footer-wa-btn {
+  width: 100%;
+  max-width: 240px;
+  margin-bottom: 14px;
+}
+
+.footer-phone-link {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #D1D5DB;
+  transition: color var(--transition-fast);
+}
+
+.footer-phone-link:hover {
+  color: var(--brand-orange);
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid #2D313A;
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #6B7280;
+}

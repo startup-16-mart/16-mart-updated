@@ -1,73 +1,53 @@
 /**
- * SIXTEEN MART — Theme Management (Light / Dark Mode)
- * Default theme: Daylight (Light Mode).
- * Persists user's manual selection via localStorage.
+ * SIXTEEN MART — Theme Management (Light / Dark)
+ * Defaults to Light theme. Persists selection in localStorage.
  */
 (function() {
-    'use strict';
+  'use strict';
 
-    var STORAGE_KEY = 'sixteen_mart_theme';
+  var THEME_KEY = (window.SITE_CONFIG && window.SITE_CONFIG.themeStorageKey) || 'sixteenmart_theme';
 
-    /**
-     * Get preferred theme:
-     * Strictly defaults to 'light' (Daylight theme) unless user manually selected 'dark'.
-     */
-    function getPreferredTheme() {
-        var storedTheme = localStorage.getItem(STORAGE_KEY);
-        if (storedTheme === 'dark') {
-            return 'dark';
-        }
-        return 'light'; // Always default to daylight
-    }
+  function getSavedTheme() {
+    return localStorage.getItem(THEME_KEY) || 'light';
+  }
 
-    /**
-     * Apply theme to <html> element and update any toggle button icons
-     */
-    function applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem(THEME_KEY, theme);
 
-        var toggleBtns = document.querySelectorAll('.theme-toggle-btn, #themeToggle');
-        toggleBtns.forEach(function(btn) {
-            if (theme === 'dark') {
-                btn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-                btn.setAttribute('aria-label', 'Switch to daylight mode');
-                btn.setAttribute('title', 'Switch to daylight mode');
-            } else {
-                btn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-                btn.setAttribute('aria-label', 'Switch to dark mode');
-                btn.setAttribute('title', 'Switch to dark mode');
-            }
-        });
-    }
-
-    /**
-     * Toggle between light and dark themes
-     */
-    function toggleTheme() {
-        var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-        var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        localStorage.setItem(STORAGE_KEY, newTheme);
-        applyTheme(newTheme);
-    }
-
-    // Expose functions globally
-    window.toggleTheme = toggleTheme;
-    window.applyTheme = applyTheme;
-
-    // Apply preferred theme immediately
-    var initialTheme = getPreferredTheme();
-    applyTheme(initialTheme);
-
-    // Bind event listeners when DOM is loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        applyTheme(document.documentElement.getAttribute('data-theme') || getPreferredTheme());
-
-        var toggleBtns = document.querySelectorAll('.theme-toggle-btn, #themeToggle');
-        toggleBtns.forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                toggleTheme();
-            });
-        });
+    // Update aria-label and icon state on theme toggles
+    var toggles = document.querySelectorAll('#nav-theme-toggle, #nav-theme-toggle-mob');
+    toggles.forEach(function(btn) {
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+      btn.setAttribute('title', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
     });
+  }
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme') || 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+
+    // Track theme toggle event
+    if (window.trackThemeToggle) {
+      window.trackThemeToggle(next);
+    }
+  }
+
+  // Initial setup on DOM ready
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = getSavedTheme();
+    applyTheme(saved);
+
+    document.addEventListener('click', function(e) {
+      var toggleBtn = e.target.closest('#nav-theme-toggle, #nav-theme-toggle-mob');
+      if (toggleBtn) {
+        e.preventDefault();
+        toggleTheme();
+      }
+    });
+  });
+
+  window.toggleTheme = toggleTheme;
+  window.applyTheme = applyTheme;
 })();

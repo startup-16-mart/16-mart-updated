@@ -1,0 +1,240 @@
+﻿==========================================================
+FILE: index.html
+==========================================================
+GTM <head> script location: lines 4 to 10
+4:     <!-- Google Tag Manager -->
+5: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+6: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+7: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+8: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+9: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+10: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 49 to 52
+49:     <!-- Google Tag Manager (noscript) -->
+50: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+51: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+52: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: about.html
+==========================================================
+GTM <head> script location: lines 5 to 11
+5:     <!-- Google Tag Manager -->
+6: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+7: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+8: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+9: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+10: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+11: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 50 to 53
+50: <!-- Google Tag Manager (noscript) -->
+51: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+52: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+53: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: products.html
+==========================================================
+GTM <head> script location: lines 5 to 11
+5:     <!-- Google Tag Manager -->
+6: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+7: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+8: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+9: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+10: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+11: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 50 to 53
+50: <!-- Google Tag Manager (noscript) -->
+51: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+52: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+53: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: contact.html
+==========================================================
+GTM <head> script location: lines 5 to 11
+5:     <!-- Google Tag Manager -->
+6: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+7: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+8: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+9: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+10: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+11: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 50 to 53
+50: <!-- Google Tag Manager (noscript) -->
+51: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+52: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+53: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: faq.html
+==========================================================
+GTM <head> script location: lines 5 to 11
+5:     <!-- Google Tag Manager -->
+6: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+7: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+8: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+9: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+10: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+11: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 50 to 53
+50:     <!-- Google Tag Manager (noscript) -->
+51: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+52: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+53: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: home-gadgets.html
+==========================================================
+GTM <head> script location: lines 4 to 10
+4:     <!-- Google Tag Manager -->
+5: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+6: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+7: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+8: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+9: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+10: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 49 to 52
+49:     <!-- Google Tag Manager (noscript) -->
+50: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+51: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+52: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: skin-care-tools.html
+==========================================================
+GTM <head> script location: lines 4 to 10
+4:     <!-- Google Tag Manager -->
+5: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+6: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+7: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+8: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+9: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+10: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 49 to 52
+49:     <!-- Google Tag Manager (noscript) -->
+50: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+51: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+52: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: hair-care-tools.html
+==========================================================
+GTM <head> script location: lines 4 to 10
+4:     <!-- Google Tag Manager -->
+5: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+6: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+7: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+8: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+9: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+10: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 49 to 52
+49:     <!-- Google Tag Manager (noscript) -->
+50: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+51: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+52: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: self-care-wellness.html
+==========================================================
+GTM <head> script location: lines 4 to 10
+4:     <!-- Google Tag Manager -->
+5: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+6: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+7: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+8: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+9: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+10: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 49 to 52
+49:     <!-- Google Tag Manager (noscript) -->
+50: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+51: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+52: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: cart.html
+==========================================================
+GTM <head> script location: lines 4 to 10
+4:     <!-- Google Tag Manager -->
+5: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+6: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+7: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+8: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+9: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+10: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 49 to 52
+49:     <!-- Google Tag Manager (noscript) -->
+50: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+51: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+52: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: signin.html
+==========================================================
+GTM <head> script location: lines 4 to 10
+4:     <!-- Google Tag Manager -->
+5: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+6: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+7: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+8: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+9: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+10: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 49 to 52
+49:     <!-- Google Tag Manager (noscript) -->
+50: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+51: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+52: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+
+==========================================================
+FILE: 404.html
+==========================================================
+GTM <head> script location: lines 4 to 10
+4:     <!-- Google Tag Manager -->
+5: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+6: new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+7: j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+8: 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+9: })(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+10: <!-- End Google Tag Manager -->
+
+GTM <body> noscript location: lines 49 to 52
+49:     <!-- Google Tag Manager (noscript) -->
+50: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+51: height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+52: <!-- End Google Tag Manager (noscript) -->
+
+Direct GA/gtag snippets: None (GTM container only)
+

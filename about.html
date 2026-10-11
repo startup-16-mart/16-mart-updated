@@ -12,12 +12,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>About Us — SIXTEEN MART | Always More Value</title>
-    <meta name="description" content="16 Mart is based on offering 16 selected products representing the 16 members of our group. Discover our vision, mission, and core values.">
+    <meta name="description" content="16 Mart is built on the concept of offering curated lifestyle products representing our 16 founding members. Discover our vision, mission, and core values.">
+    <link rel="canonical" href="https://16mart.store/about.html">
 
-    <!-- Anti-FOUC Theme Pre-loader: Strictly Defaults to Daylight (Light) Theme -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Us — SIXTEEN MART | Always More Value">
+    <meta property="og:description" content="16 Founders, 16 Selected Products. Discover the story, vision, and core values of SIXTEEN MART.">
+    <meta property="og:url" content="https://16mart.store/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://16mart.store/images/web-banner-1.jpg">
+
+    <!-- Anti-FOUC Theme Pre-loader -->
     <script>
         (function() {
-            var saved = localStorage.getItem('sixteen_mart_theme');
+            var saved = localStorage.getItem('sixteenmart_theme') || localStorage.getItem('sixteen_mart_theme');
             if (saved === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
             } else {
@@ -29,13 +37,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Modular Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Modular Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 
 <body>
@@ -43,260 +51,160 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <!-- =========================================================
-         HEADER & COMPACT NAVIGATION BAR
-    ========================================================= -->
-    <header>
-        <div class="header-container">
-            <!-- Brand Logo -->
-            <a href="index.html" class="logo-link" aria-label="SIXTEEN MART Home">
-                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="logo">
-            </a>
+    <!-- Shared Header (Rendered by layout.js) -->
+    <div id="site-header"></div>
 
-            <!-- Mobile Menu Toggle Button -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+    <main id="main-content">
+        <section class="about-hero-section">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumbs-separator">&rsaquo;</span>
+                    <span aria-current="page">About Us</span>
+                </nav>
 
-            <!-- Navigation Links -->
-            <nav id="mainNav" aria-label="Main Navigation">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link active" aria-current="page">About Us</a>
-
-                <!-- All Products Dropdown Menu -->
-                <div class="dropdown" id="productsDropdown">
-                    <a href="products.html" class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-                        All Products
-                        <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
-                    </a>
-                    <div class="dropdown-menu" role="menu">
-                        <!-- Home Accessories Submenu -->
-                        <div class="category-dropdown" id="homeDropdown">
-                            <a href="products.html?category=home" role="menuitem">
-                                <span>Home Accessories</span>
-                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
-                            </a>
-                            <div class="product-submenu" role="menu">
-                                <a href="products.html?search=Milk+Frother" role="menuitem">Electric Handheld Milk Frother</a>
-                                <a href="products.html?search=Thermal+Printer" role="menuitem">Mini Portable Pocket Thermal Printer</a>
-                                <a href="products.html?search=Juice+Blender" role="menuitem">Portable Rechargeable Juice Blender</a>
-                                <a href="products.html?search=Aroma+Diffuser" role="menuitem">Ultrasonic Aroma Diffuser</a>
-                            </div>
-                        </div>
-
-                        <!-- Beauty Accessories Submenu -->
-                        <div class="category-dropdown" id="beautyDropdown">
-                            <a href="products.html?category=beauty" role="menuitem">
-                                <span>Beauty Accessories</span>
-                                <span class="category-arrow"><i class="fa-solid fa-chevron-right"></i></span>
-                            </a>
-                            <div class="product-submenu" role="menu">
-                                <a href="products.html?search=Hot+Air+Styler" role="menuitem">5-in-1 Hot Air Styler</a>
-                                <a href="products.html?search=Jade+Roller" role="menuitem">Jade Roller & Gua Sha Set</a>
-                                <a href="products.html?search=Spa+Gel+Socks" role="menuitem">Moisturizing Pink Spa Gel Socks</a>
-                                <a href="products.html?search=Face+Vacuum" role="menuitem">Face Vacuum Pore Cleanser</a>
-                                <a href="products.html?search=Derma+Roller" role="menuitem">Derma Roller Micro-Needle</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="about-header-text">
+                    <h1 class="about-main-title">About SIXTEEN MART</h1>
+                    <p class="about-main-tagline">Always More Value.</p>
                 </div>
-
-                <a href="contact.html" class="nav-link">Contact Us</a>
-                <a href="faq.html" class="nav-link">FAQ</a>
-            </nav>
-
-            <!-- Header Actions: Search & Day/Night Theme Switcher -->
-            <div class="header-actions">
-                <div class="search-box" role="search">
-                    <input type="text" id="globalSearchInput" placeholder="Search products..." autocomplete="off" aria-label="Search products">
-                    <button type="button" class="search-btn" aria-label="Submit search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-
-                <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Switch theme" title="Toggle Light / Dark mode">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
             </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- =========================================================
-             PAGE HERO
-        ========================================================= -->
-        <section class="page-hero">
-            <h1>About 16 Mart</h1>
-            <p>Always More Value</p>
         </section>
 
-        <!-- =========================================================
-             BRAND OVERVIEW (FROM BRAND GUIDELINES)
-        ========================================================= -->
-        <section class="section">
-            <div class="about-story-section">
-                <div class="about-story-text">
-                    <span class="product-badge" style="margin-bottom: 12px; display: inline-block;">Brand Overview</span>
-                    <h2>The 16 Products & 16 Members Concept</h2>
-                    <p>
-                        The name <strong>16 Mart</strong> is based on the business concept of offering <strong>16 selected products</strong>. The 16 products represent the <strong>16 members of the group</strong>, making the name an essential part of our business identity.
-                    </p>
-                    <p>
-                        <strong>16 Mart</strong> is an online lifestyle store that offers affordable, functional, and trendy products for young Sri Lankan consumers. The store focuses on a limited selection of 16 products, including home accessories and beauty accessories. Customers discover the products through digital channels and shop easily through our direct social channels.
-                    </p>
-                    <p style="font-size: 15px; font-weight: 600; color: var(--coral);">
-                        Official Tagline: “Always More Value.”
-                    </p>
-                </div>
+        <!-- Brand Story & Concept -->
+        <section class="about-story-section">
+            <div class="container">
+                <div class="about-story-grid">
+                    <div class="about-story-card-main">
+                        <span class="offer-badge-tag">Brand Story</span>
+                        <h2>The 16 Members &amp; 16 Products Concept</h2>
+                        <p>The name <strong>SIXTEEN MART</strong> is built directly upon our core business concept: offering <strong>16 carefully selected lifestyle products</strong>, each curated to represent the <strong>16 founding members</strong> of our team.</p>
+                        <p>We are an online lifestyle store created for Sri Lankan consumers, particularly university students and young professionals seeking affordable, functional, and trendy essentials. Our focused selection prioritizes genuine utility, honest pricing, and direct social ordering through WhatsApp.</p>
+                        <div class="about-tagline-highlight">
+                            <span>Official Brand Tagline:</span>
+                            <strong>&ldquo;Always More Value.&rdquo;</strong>
+                        </div>
+                    </div>
 
-                <div class="about-story-card">
-                    <div class="about-number-badge">16</div>
-                    <h3 style="font-size: 20px; color: var(--dark-brown); margin-bottom: 8px;">16 Members • 16 Smart Picks</h3>
-                    <p style="font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-bottom: 16px;">
-                        "Young • Simple • Useful • Affordable. We curate products specifically for university students, young professionals, and modern households across Sri Lanka."
-                    </p>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <span class="product-badge"><i class="fa-solid fa-check"></i> 16 Selected Products</span>
-                        <span class="product-badge"><i class="fa-solid fa-truck-fast"></i> Islandwide Delivery</span>
-                        <span class="product-badge"><i class="fa-brands fa-whatsapp"></i> Direct WhatsApp</span>
+                    <div class="about-story-card-side">
+                        <div class="about-stat-circle">16</div>
+                        <h3>16 Founders &bull; 16 Smart Picks</h3>
+                        <p>Young &bull; Simple &bull; Useful &bull; Affordable. Designed from the ground up to bring transparent value and convenient delivery across Sri Lanka.</p>
+                        <ul class="about-features-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>16 Handpicked Lifestyle Tools</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Islandwide Delivery in Sri Lanka</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Direct WhatsApp Assistance</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- =========================================================
-                 VISION & MISSION (VERBATIM FROM BRAND GUIDELINES)
-            ========================================================= -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0;">
-                <div style="background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--coral); border-radius: var(--radius-md); padding: 26px; box-shadow: var(--shadow-sm);">
-                    <div style="font-size: 24px; color: var(--coral); margin-bottom: 10px;"><i class="fa-solid fa-eye"></i></div>
-                    <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--dark-brown); margin-bottom: 10px;">Our Vision</h3>
-                    <p style="font-size: 14px; line-height: 1.8; color: var(--text);">
-                        “To become a trusted online lifestyle store in Sri Lanka, known for simple shopping and affordable, useful products.”
-                    </p>
-                </div>
+        <!-- Vision & Mission -->
+        <section class="about-vm-section">
+            <div class="container">
+                <div class="about-vm-grid">
+                    <div class="about-vm-card">
+                        <div class="about-vm-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/></svg>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>&ldquo;To become a trusted online lifestyle store in Sri Lanka, known for simple shopping and affordable, useful products.&rdquo;</p>
+                    </div>
 
-                <div style="background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--coral); border-radius: var(--radius-md); padding: 26px; box-shadow: var(--shadow-sm);">
-                    <div style="font-size: 24px; color: var(--coral); margin-bottom: 10px;"><i class="fa-solid fa-bullseye"></i></div>
-                    <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--dark-brown); margin-bottom: 10px;">Our Mission</h3>
-                    <p style="font-size: 14px; line-height: 1.8; color: var(--text);">
-                        “To provide young Sri Lankan consumers with affordable, functional and trendy lifestyle products through a simple and convenient online shopping experience.”
-                    </p>
-                </div>
-            </div>
-
-            <!-- =========================================================
-                 CORE VALUES (EXACT 4 CORE VALUES FROM BRAND GUIDELINES)
-            ========================================================= -->
-            <div class="section-title" style="margin-top: 50px;">
-                <h2>Our Core Values</h2>
-                <p>The four pillars that define how 16 Mart serves young Sri Lankan consumers.</p>
-            </div>
-
-            <div class="about-values-grid" style="grid-template-columns: repeat(4, 1fr);">
-                <!-- Core Value 1: Affordability -->
-                <div class="about-value-card">
-                    <i class="fa-solid fa-tag"></i>
-                    <h3>Affordability</h3>
-                    <p>Value-for-money in every single product, offering great lifestyle upgrades without the high price tag.</p>
-                </div>
-
-                <!-- Core Value 2: Simplicity -->
-                <div class="about-value-card">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    <h3>Simplicity</h3>
-                    <p>Easy, uncomplicated shopping. No difficult checkouts — discover and order directly in seconds.</p>
-                </div>
-
-                <!-- Core Value 3: Trust -->
-                <div class="about-value-card">
-                    <i class="fa-solid fa-shield-check"></i>
-                    <h3>Trust</h3>
-                    <p>Honest products and honest communication. Verified product specifications and transparent pricing.</p>
-                </div>
-
-                <!-- Core Value 4: Community -->
-                <div class="about-value-card">
-                    <i class="fa-solid fa-users-gear"></i>
-                    <h3>Community</h3>
-                    <p>Built by and for young Sri Lankans — understanding real everyday lifestyle needs.</p>
+                    <div class="about-vm-card">
+                        <div class="about-vm-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>&ldquo;To provide young Sri Lankan consumers with affordable, functional and trendy lifestyle products through a simple and convenient online shopping experience.&rdquo;</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- CTA Box -->
-            <div style="text-align: center; margin-top: 60px; padding: 40px 24px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-lg);">
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; color: var(--dark-brown); margin-bottom: 10px;">Ready to Explore Our Smart Picks?</h3>
-                <p style="color: var(--muted); font-size: 14px; max-width: 520px; margin: 0 auto 24px;">Discover our collection of home accessories and beauty accessories, or reach out to us directly on WhatsApp.</p>
-                <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-                    <a href="products.html" class="btn">
-                        <span>Browse Catalog</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20would%20like%20to%20know%20more%20about%20your%20store." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <span>Chat on WhatsApp (+94 76 805 6036)</span>
-                    </a>
+        <!-- Core Values -->
+        <section class="about-values-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Core Values</h2>
+                    <p class="section-subtitle">The four pillars that define every product we curate and every customer we serve.</p>
+                </div>
+
+                <div class="about-values-grid">
+                    <div class="value-card-box">
+                        <div class="value-icon-circle">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+                        </div>
+                        <h3>Affordability</h3>
+                        <p>Value-for-money in every single pick, offering lifestyle upgrades without the high price tag.</p>
+                    </div>
+
+                    <div class="value-card-box">
+                        <div class="value-icon-circle">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3>Simplicity</h3>
+                        <p>Easy, uncomplicated browsing and direct ordering. No confusing checkout walls or delays.</p>
+                    </div>
+
+                    <div class="value-card-box">
+                        <div class="value-icon-circle">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Trust</h3>
+                        <p>Honest products and direct communication. Verified specifications with transparent pricing.</p>
+                    </div>
+
+                    <div class="value-card-box">
+                        <div class="value-icon-circle">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        </div>
+                        <h3>Community</h3>
+                        <p>Built by and for young Sri Lankans &mdash; understanding real everyday lifestyle needs.</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action Banner -->
+                <div class="about-cta-banner">
+                    <h2>Ready to Explore Our Smart Picks?</h2>
+                    <p>Discover our full collection of lifestyle tools or chat directly with our team on WhatsApp.</p>
+                    <div class="about-cta-buttons">
+                        <a href="products.html" class="btn btn-primary" data-track="nav_click" data-link-id="about-cta-catalog">
+                            <span>Browse Full Catalog</span>
+                            &rarr;
+                        </a>
+                        <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20would%20like%20to%20know%20more%20about%20your%20products." class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-track="whatsapp_order" data-location="about-page">
+                            <svg class="icon-wa" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.149.929 3.182 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.768-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.16-.175.348-.217.464-.217.116 0 .232.002.333.007.107.005.249-.041.39.299.144.348.492 1.2.535 1.288.043.087.072.188.014.304-.058.116-.087.188-.174.29-.087.101-.184.227-.262.305-.088.087-.18.182-.077.359.101.174.453.748.972 1.211.668.596 1.232.78 1.406.867.174.087.275.072.377-.044.101-.116.435-.507.551-.681.116-.174.232-.145.391-.087.16.058 1.014.478 1.188.565.174.087.29.13.333.203.044.072.044.42-.1 1.025z"/></svg>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- =========================================================
-         FOOTER
-    ========================================================= -->
-    <footer>
-        <div class="footer-container">
-            <!-- Brand Column -->
-            <div class="footer-column">
-                <img src="images/logo.jpeg" alt="SIXTEEN MART Logo" class="footer-logo">
-                <p class="footer-tagline">Always More Value.</p>
-            </div>
+    <!-- Shared Footer (Rendered by layout.js) -->
+    <div id="site-footer"></div>
 
-            <!-- Quick Links Column -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="about.html">About Us</a></p>
-                <p><a href="products.html">All Products</a></p>
-                <p><a href="contact.html">Contact Us</a></p>
-                <p><a href="faq.html">FAQ</a></p>
-            </div>
-
-            <!-- Contact & Social Column -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p class="contact-description">Connect with SIXTEEN MART through our active social media pages.</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/share/1FCNRuqKVa/?mibextid=wwXIfr" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/_16.mart_onlinestore?stkn=MWQ0cXRsaTF0YXIxNw==" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@sixteenmart1?_r=1&_t=ZS-99h4W7jognR" class="social-link tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-                    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20an%20inquiry." class="social-link whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (+94 76 805 6036)" title="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            &copy; 2026 SIXTEEN MART. All Rights Reserved. Always More Value.
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Action Button -->
-    <a href="https://wa.me/94768056036?text=Hi%20SIXTEEN%20MART,%20I%20have%20a%20question." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (+94 76 805 6036)" title="Chat on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- JavaScript Dependencies -->
-    <script src="js/theme.js"></script>
-    <script src="js/products-data.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Scripts -->
+    <script src="js/config.js" defer></script>
+    <script src="js/products-data.js" defer></script>
+    <script src="js/reviews-data.js" defer></script>
+    <script src="js/analytics.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/layout.js" defer></script>
 </body>
 
 </html>
