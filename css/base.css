@@ -1,10 +1,13 @@
 /**
  * SIXTEEN MART — Base Styles, CSS Variables & Design System
  * Primary Coral Orange: #FF6F59 (from brand guideline)
+ * ORANGE-DOMINANT: gradient background, frosted glass surfaces
  */
 :root {
-  /* Brand Palette */
+  /* Brand Palette (from brand guideline) */
   --brand-orange: #FF6F59;
+  --brand-orange-light: #FF8F7C;
+  --brand-orange-deep: #E5391F;
   --brand-orange-dark: #D84C35;
   --brand-orange-soft: #FFF0ED;
   --brand-teal: #1B4D4A;
@@ -12,8 +15,8 @@
   --brand-charcoal: #2B2B2B;
   --brand-mustard: #F2B134;
 
-  /* Theme: Light (Default) */
-  --bg: #FFFFFF;
+  /* Theme: Light (Default) — Orange-dominant */
+  --bg: #FF6F59;
   --surface: #FFFFFF;
   --surface-subtle: #F8F9FA;
   --surface-card: #FFFFFF;
@@ -23,16 +26,22 @@
   --border: #E5E7EB;
   --border-light: #F3F4F6;
 
+  /* Page gradient — the main background */
+  --page-gradient: linear-gradient(165deg, #FF8F7C 0%, #FF6F59 38%, #F2492F 75%, #E5391F 100%);
+
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.6);
-  --glass-blur: blur(14px) saturate(160%);
+  --glass-bg: rgba(255, 255, 255, 0.22);
+  --glass-bg-card: rgba(255, 255, 255, 0.62);
+  --glass-bg-panel: rgba(255, 248, 240, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-blur: 18px;
+  --glass-shadow: 0 10px 34px rgba(120, 30, 10, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
-  --shadow-orange: 0 6px 20px rgba(255, 111, 89, 0.28);
+  --shadow-sm: 0 2px 8px rgba(120, 30, 10, 0.08);
+  --shadow-md: 0 4px 20px rgba(120, 30, 10, 0.14);
+  --shadow-lg: 0 10px 30px rgba(120, 30, 10, 0.22);
+  --shadow-orange: 0 6px 20px rgba(255, 111, 89, 0.35);
 
   /* Layout & Sizing */
   --nav-height: 84px;
@@ -43,6 +52,14 @@
   --radius-lg: 20px;
   --radius-pill: 9999px;
 
+  /* WhatsApp Icon Sizes */
+  --wa-icon-card: 28px;
+  --wa-icon-card-mobile: 26px;
+  --wa-icon-modal: 24px;
+  --wa-icon-floating: 34px;
+  --wa-icon-tab: 28px;
+  --wa-icon-footer: 26px;
+
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-base: 220ms ease;
@@ -50,20 +67,25 @@
 }
 
 [data-theme="dark"] {
-  --bg: #121316;
-  --surface: #1B1D22;
-  --surface-subtle: #23262D;
-  --surface-card: #1E2128;
+  --bg: #1E1411;
+  --surface: #2B1A14;
+  --surface-subtle: #331E16;
+  --surface-card: #2B1A14;
   --text: #F3F4F6;
   --text-muted: #9CA3AF;
-  --text-inverse: #121316;
-  --border: #2D313A;
-  --border-light: #23262D;
+  --text-inverse: #1E1411;
+  --border: #4A2E22;
+  --border-light: #3D2419;
 
-  --brand-orange-soft: rgba(255, 111, 89, 0.15);
+  --brand-orange-soft: rgba(255, 111, 89, 0.18);
 
-  --glass-bg: rgba(27, 29, 34, 0.88);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --page-gradient: linear-gradient(165deg, #2B1A14 0%, #1E1411 50%, #1A0F0B 100%);
+
+  --glass-bg: rgba(255, 255, 255, 0.07);
+  --glass-bg-card: rgba(255, 255, 255, 0.10);
+  --glass-bg-panel: rgba(43, 26, 20, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --glass-shadow: 0 10px 34px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -86,18 +108,35 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--bg);
+  background: var(--page-gradient);
+  background-attachment: fixed;
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: background-color var(--transition-base), color var(--transition-base);
+  transition: background var(--transition-base), color var(--transition-base);
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Decorative radial glows behind glass surfaces */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 25%, rgba(255, 248, 240, 0.16) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 60%, rgba(242, 177, 52, 0.12) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 45% at 50% 85%, rgba(255, 248, 240, 0.14) 0%, transparent 60%);
 }
 
 main {
   flex: 1 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 img, picture, svg, video {
@@ -130,11 +169,54 @@ ul, ol {
 
 /* Accessible tap target & focus */
 :focus-visible {
-  outline: 2px solid var(--brand-orange);
+  outline: 3px solid rgba(255, 255, 255, 0.8);
   outline-offset: 3px;
 }
 
-/* Button Component Styles */
+/* ==========================================================
+   REUSABLE GLASS CLASS
+   ========================================================== */
+.glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(170%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(170%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card {
+  background: var(--glass-bg-card);
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  backdrop-filter: blur(16px) saturate(170%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+}
+
+.glass-panel {
+  background: var(--glass-bg-panel);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass { background: rgba(255, 248, 240, 0.92); }
+  .glass-card { background: rgba(255, 248, 240, 0.95); }
+  .glass-panel { background: rgba(255, 248, 240, 0.96); }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass { background: rgba(255, 248, 240, 0.95); }
+  .glass-card { background: rgba(255, 248, 240, 0.97); }
+  .glass-panel { background: rgba(255, 248, 240, 0.98); }
+}
+
+/* ==========================================================
+   BUTTON COMPONENT STYLES
+   ========================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -151,14 +233,14 @@ ul, ol {
 }
 
 .btn-primary {
-  background-color: var(--brand-orange);
+  background-color: var(--brand-orange-deep);
   color: #FFFFFF !important;
   box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-  background-color: var(--brand-orange-dark);
-  transform: translateY(-1px);
+  background-color: #C8301A;
+  transform: translateY(-2px);
   box-shadow: var(--shadow-orange);
 }
 
@@ -170,11 +252,13 @@ ul, ol {
 
 .btn-secondary:hover {
   border-color: var(--brand-orange);
-  color: var(--brand-orange-dark);
+  color: var(--brand-orange-deep);
   background-color: var(--brand-orange-soft);
 }
 
-/* Utility Containers */
+/* ==========================================================
+   UTILITY CONTAINERS
+   ========================================================== */
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -196,12 +280,15 @@ ul, ol {
   margin-bottom: 36px;
 }
 
+/* Section titles on the orange background: white, bold */
 .section-title {
+  font-family: 'Montserrat', 'Inter', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--text);
+  color: #FFFFFF;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
+  text-shadow: 0 2px 12px rgba(120, 30, 10, 0.25);
 }
 
 @media (max-width: 768px) {

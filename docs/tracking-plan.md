@@ -30,8 +30,7 @@ Tracking is implemented using vanilla JavaScript via `js/analytics.js` pushing s
 | Cart Item Quantity Minus | `cart-minus-{productId}` | `cart-minus-16M-HG-001` |
 | Cart Item Quantity Plus | `cart-plus-{productId}` | `cart-plus-16M-HG-001` |
 | Cart WhatsApp Checkout | `btn-cart-whatsapp-checkout` | Main checkout button on `cart.html` |
-| Hero Slide Hotspot Link | `hero-slide-{n}` | `hero-slide-1` to `hero-slide-4` |
-| Hero Slide Shop Now CTA | `hero-shopnow-{n}` | `hero-shopnow-1` to `hero-shopnow-4` |
+| Hero Slide Hotspot Link | `hero-slide-{n}` | `hero-slide-1` to `hero-slide-4` (full-slide clickable hotspot) |
 | Hero Slider Controls | `hero-prev`, `hero-next`, `hero-dot-{n}` | Slider navigation arrows and dots |
 | Desktop Nav Links | `nav-home`, `nav-about`, `nav-products`, `nav-contact`, `nav-faq` | Primary navigation links |
 | Nav Category Links | `nav-cat-{categoryId}` | `nav-cat-home-gadgets`, etc. |
@@ -40,7 +39,7 @@ Tracking is implemented using vanilla JavaScript via `js/analytics.js` pushing s
 | Mobile Category Strip | `home-catstrip-{categoryId}`, `home-catstrip-offers` | Icon strip on home page (≤ 768px) |
 | Mobile Product "+" Button | `btn-addtocart-{productId}` | Round orange button (`data-location="mobile-card"`) |
 | Category Cards (Home) | `home-cat-{categoryId}` | Desktop 4-column category grid cards |
-| Special Offer Banner | `offer-banner`, `offer-banner-cta`, `offer-banner-badge` | 30% OFF promotion card on home |
+| Special Offer Banner | `offer-banner`, `offer-banner-cta` | 30% OFF promotion card on home |
 | Value Strip Pillars | `value-founders`, `value-affordable`, `value-functional`, `value-whatsapp` | 4 brand value cards |
 | Floating WhatsApp Button | `float-whatsapp` | Desktop floating action button (hidden on mobile) |
 | Footer Social Links | `footer-social-facebook`, `footer-social-instagram`, `footer-social-tiktok`, `footer-social-whatsapp` | Footer circular social buttons |

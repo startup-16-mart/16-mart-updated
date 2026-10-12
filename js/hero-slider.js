@@ -77,7 +77,6 @@
           'aria-label="' + slide.alt + '">' +
           '<img src="' + slide.image + '" alt="' + slide.alt + '" class="hero-slide-img" width="1280" height="720" ' + loadingAttr + ' />' +
           '<div class="hero-slide-overlay"></div>' +
-          '<span class="hero-shopnow-pill" id="hero-shopnow-' + slide.index + '">Shop Now &rarr;</span>' +
         '</a>' +
       '</div>';
     });
