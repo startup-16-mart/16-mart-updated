@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NBMDWPS4');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Shopping Cart — SIXTEEN MART | Review &amp; WhatsApp Checkout</title>
+    <meta name="description" content="Review your selected items and easily complete your order via WhatsApp with SIXTEEN MART.">
+    <link rel="canonical" href="https://16mart.store/cart.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Shopping Cart — SIXTEEN MART">
+    <meta property="og:description" content="Review your items and check out directly via WhatsApp with SIXTEEN MART.">
+    <meta property="og:url" content="https://16mart.store/cart.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://16mart.store/images/web-banner-1.jpg">
+
+    <!-- Anti-FOUC Theme Pre-loader -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('sixteenmart_theme') || localStorage.getItem('sixteen_mart_theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Modular Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMDWPS4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Shared Header (Rendered by layout.js) -->
+    <div id="site-header"></div>
+
+    <main id="main-content">
+        <section class="catalog-header-section">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumbs-separator">&rsaquo;</span>
+                    <a href="products.html">All Products</a>
+                    <span class="breadcrumbs-separator">&rsaquo;</span>
+                    <span aria-current="page">Your Cart</span>
+                </nav>
+
+                <h1 class="catalog-title">Shopping Cart</h1>
+                <p class="catalog-count-line" id="cart-header-count">Review your items before ordering via WhatsApp</p>
+            </div>
+        </section>
+
+        <section class="cart-page-section">
+            <div class="container">
+                <div id="cart-container">
+                    <!-- Populated dynamically by Cart UI handler -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Footer (Rendered by layout.js) -->
+    <div id="site-footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/config.js" defer></script>
+    <script src="js/products-data.js" defer></script>
+    <script src="js/reviews-data.js" defer></script>
+    <script src="js/analytics.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/layout.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function renderCartPage() {
+                var container = document.getElementById('cart-container');
+                if (!container || !window.CartService) return;
+
+                var items = window.CartService.getCart();
+                var headerCountEl = document.getElementById('cart-header-count');
+
+                if (!items || items.length === 0) {
+                    if (headerCountEl) headerCountEl.textContent = 'Your cart is currently empty';
+                    container.innerHTML =
+                        '<div class="cart-empty-state">' +
+                            '<div class="cart-empty-icon">' +
+                                '<svg viewBox="0 0 24 24" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>' +
+                            '</div>' +
+                            '<h2 class="cart-empty-title">Your Cart is Empty</h2>' +
+                            '<p class="cart-empty-text">Looks like you haven&rsquo;t added any lifestyle tools yet.</p>' +
+                            '<a href="products.html" class="btn btn-primary" data-track="nav_click" data-link-id="empty-cart-browse">Browse All Products &rarr;</a>' +
+                        '</div>';
+                    return;
+                }
+
+                var subtotalOriginal = 0;
+                var totalEffective = 0;
+                var totalUnits = 0;
+
+                items.forEach(function(item) {
+                    subtotalOriginal += (item.originalPrice * item.qty);
+                    totalEffective += item.lineTotal;
+                    totalUnits += item.qty;
+                });
+
+                var discountAmount = subtotalOriginal - totalEffective;
+                if (headerCountEl) {
+                    headerCountEl.textContent = totalUnits + ' ' + (totalUnits === 1 ? 'item' : 'items') + ' in your bag';
+                }
+
+                var itemsHtml = items.map(function(item) {
+                    var unitFormatted = 'Rs. ' + item.effectivePrice.toLocaleString();
+                    var lineFormatted = 'Rs. ' + item.lineTotal.toLocaleString();
+                    var isAtMax = item.qty >= item.maxQty;
+
+                    return '<div class="cart-item-row" data-product-id="' + item.id + '">' +
+                        '<div class="cart-item-thumb">' +
+                            '<img src="' + item.image + '" alt="' + item.name + '" width="80" height="80" loading="lazy" />' +
+                        '</div>' +
+                        '<div class="cart-item-meta">' +
+                            '<h3 class="cart-item-name">' + item.name + '</h3>' +
+                            '<span class="cart-item-unit-price">' + unitFormatted + ' each</span>' +
+                            (isAtMax ? '<span style="font-size: 0.78rem; color: #EA580C; font-weight: 600;">Max stock limit reached (' + item.maxQty + ')</span>' : '') +
+                        '</div>' +
+                        '<div class="cart-item-controls">' +
+                            '<div class="modal-stepper-wrap" style="margin: 0;">' +
+                                '<button type="button" class="stepper-btn" id="cart-minus-' + item.id + '" data-action="decrease-qty" data-product-id="' + item.id + '" aria-label="Decrease quantity">&minus;</button>' +
+                                '<span class="stepper-value" style="min-width: 28px; text-align: center; font-weight: 700;">' + item.qty + '</span>' +
+                                '<button type="button" class="stepper-btn" id="cart-plus-' + item.id + '" data-action="increase-qty" data-product-id="' + item.id + '" ' + (isAtMax ? 'disabled' : '') + ' aria-label="Increase quantity">&plus;</button>' +
+                            '</div>' +
+                            '<button type="button" class="cart-item-remove-btn" id="cart-remove-' + item.id + '" data-action="remove-item" data-product-id="' + item.id + '" aria-label="Remove ' + item.name + ' from cart" title="Remove item">' +
+                                '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>' +
+                            '</button>' +
+                        '</div>' +
+                        '<div class="cart-item-total">' + lineFormatted + '</div>' +
+                    '</div>';
+                }).join('');
+
+                var discountHtml = '';
+                if (discountAmount > 0) {
+                    discountHtml =
+                        '<div class="summary-row discount-line">' +
+                            '<span>Promotional Discount (30% OFF)</span>' +
+                            '<span>- Rs. ' + discountAmount.toLocaleString() + '</span>' +
+                        '</div>';
+                }
+
+                container.innerHTML =
+                    '<div class="cart-layout">' +
+                        '<div class="cart-items-card">' +
+                            '<div class="cart-items-list">' + itemsHtml + '</div>' +
+                            '<div class="cart-links-row">' +
+                                '<a href="products.html" data-track="nav_click" data-link-id="cart-continue-shopping">&larr; Continue Shopping</a>' +
+                                '<a href="javascript:void(0)" id="cart-clear-btn" style="color: #EF4444;">Clear Bag</a>' +
+                            '</div>' +
+                        '</div>' +
+
+                        '<div class="cart-summary-card">' +
+                            '<h2 class="summary-heading">Order Summary</h2>' +
+                            '<div class="summary-row">' +
+                                '<span>Subtotal</span>' +
+                                '<span>Rs. ' + subtotalOriginal.toLocaleString() + '</span>' +
+                            '</div>' +
+                            discountHtml +
+                            '<div class="summary-row total-row">' +
+                                '<span>Total</span>' +
+                                '<span>Rs. ' + totalEffective.toLocaleString() + '</span>' +
+                            '</div>' +
+
+                            '<div class="cart-wa-note">' +
+                                '<strong>WhatsApp Confirmation:</strong> Delivery fee (islandwide) and payment mode (Cash on Delivery or Bank Transfer) will be finalized directly in your WhatsApp order chat.' +
+                            '</div>' +
+
+                            '<button type="button" class="btn btn-primary btn-checkout-wa" id="btn-cart-whatsapp-checkout" data-track="begin_checkout">' +
+                                '<svg class="icon-wa" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>' +
+                                '<span>Order via WhatsApp &rarr;</span>' +
+                            '</button>' +
+                        '</div>' +
+                    '</div>';
+
+                // Track view_cart
+                if (window.trackViewCart) {
+                    window.trackViewCart(items, totalEffective);
+                }
+            }
+
+            renderCartPage();
+
+            // Handle actions within cart
+            var container = document.getElementById('cart-container');
+            if (container) {
+                container.addEventListener('click', function(e) {
+                    var target = e.target;
+
+                    // Increase qty
+                    var incBtn = target.closest('[data-action="increase-qty"]');
+                    if (incBtn) {
+                        var pId = incBtn.getAttribute('data-product-id');
+                        var items = window.CartService.getCart();
+                        var itm = items.find(function(x) { return x.id === pId; });
+                        if (itm) {
+                            window.CartService.updateQty(pId, itm.qty + 1);
+                            renderCartPage();
+                        }
+                        return;
+                    }
+
+                    // Decrease qty
+                    var decBtn = target.closest('[data-action="decrease-qty"]');
+                    if (decBtn) {
+                        var pId = decBtn.getAttribute('data-product-id');
+                        var items = window.CartService.getCart();
+                        var itm = items.find(function(x) { return x.id === pId; });
+                        if (itm) {
+                            window.CartService.updateQty(pId, itm.qty - 1);
+                            renderCartPage();
+                        }
+                        return;
+                    }
+
+                    // Remove item
+                    var remBtn = target.closest('[data-action="remove-item"]');
+                    if (remBtn) {
+                        var pId = remBtn.getAttribute('data-product-id');
+                        window.CartService.removeFromCart(pId);
+                        renderCartPage();
+                        return;
+                    }
+
+                    // Clear cart
+                    var clearBtn = target.closest('#cart-clear-btn');
+                    if (clearBtn) {
+                        if (confirm('Are you sure you want to empty your bag?')) {
+                            window.CartService.clearCart();
+                            renderCartPage();
+                        }
+                        return;
+                    }
+
+                    // WhatsApp checkout button
+                    var checkoutBtn = target.closest('#btn-cart-whatsapp-checkout');
+                    if (checkoutBtn) {
+                        var items = window.CartService.getCart();
+                        if (!items || items.length === 0) return;
+
+                        var total = items.reduce(function(sum, x) { return sum + x.lineTotal; }, 0);
+                        if (window.trackBeginCheckout) {
+                            window.trackBeginCheckout(items, total);
+                        }
+
+                        var msg = window.CartService.formatWhatsAppOrderMessage(items, total);
+                        var waPhone = (window.SITE_CONFIG && window.SITE_CONFIG.whatsappNumber) || '94768056036';
+                        var url = 'https://wa.me/' + waPhone + '?text=' + encodeURIComponent(msg);
+                        window.open(url, '_blank', 'noopener');
+                    }
+                });
+            }
+
+            // Listen for cross-tab or external cart changes
+            window.addEventListener('sixteenmart:cartchange', function() {
+                renderCartPage();
+            });
+        });
+    </script>
+</body>
+</html>
