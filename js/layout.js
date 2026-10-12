@@ -102,51 +102,51 @@
           '</button>' +
         '</div>' +
       '</div>' +
+    '</header>' +
 
-      // Mobile Drawer Panel
-      '<div class="mobile-drawer-overlay" id="mobile-drawer-overlay">' +
-        '<div class="mobile-drawer-panel" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">' +
-          '<div class="drawer-header">' +
-            '<div class="logo-chip">' +
-              '<img src="images/logo.jpeg" alt="SIXTEEN MART" class="drawer-logo-img" width="130" height="55" />' +
+    // Mobile Drawer Panel (rendered outside <header> so backdrop-filter does not clip or trap it)
+    '<div class="mobile-drawer-overlay" id="mobile-drawer-overlay">' +
+      '<div class="mobile-drawer-panel" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">' +
+        '<div class="drawer-header">' +
+          '<div class="logo-chip">' +
+            '<img src="images/logo.jpeg" alt="SIXTEEN MART" class="drawer-logo-img" width="130" height="55" />' +
+          '</div>' +
+          '<button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation Menu">&times;</button>' +
+        '</div>' +
+        '<div class="drawer-body">' +
+          '<form class="drawer-search-form" id="drawer-search-form" role="search">' +
+            '<div class="search-input-wrapper">' +
+              '<input type="search" class="drawer-search-input" id="drawer-search-input" placeholder="Search products..." aria-label="Search products" autocomplete="off" />' +
+              '<button type="submit" class="search-submit-btn" aria-label="Search">' +
+                '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>' +
+              '</button>' +
             '</div>' +
-            '<button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation Menu">&times;</button>' +
-          '</div>' +
-          '<div class="drawer-body">' +
-            '<form class="drawer-search-form" id="drawer-search-form" role="search">' +
-              '<div class="search-input-wrapper">' +
-                '<input type="search" class="drawer-search-input" id="drawer-search-input" placeholder="Search products..." aria-label="Search products" autocomplete="off" />' +
-                '<button type="submit" class="search-submit-btn" aria-label="Search">' +
-                  '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>' +
+          '</form>' +
+          '<nav class="drawer-nav">' +
+            '<ul class="drawer-links-list">' +
+              '<li><a href="index.html" class="drawer-link ' + (isHome ? 'active' : '') + '" data-track="nav_click">Home</a></li>' +
+              '<li><a href="about.html" class="drawer-link ' + (isAbout ? 'active' : '') + '" data-track="nav_click">About Us</a></li>' +
+              '<li class="drawer-accordion-group">' +
+                '<button type="button" class="drawer-accordion-btn ' + (isProducts ? 'active' : '') + '" id="drawer-products-btn" aria-expanded="false">' +
+                  'All Products' +
+                  '<svg class="icon-caret" viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>' +
                 '</button>' +
-              '</div>' +
-            '</form>' +
-            '<nav class="drawer-nav">' +
-              '<ul class="drawer-links-list">' +
-                '<li><a href="index.html" class="drawer-link ' + (isHome ? 'active' : '') + '" data-track="nav_click">Home</a></li>' +
-                '<li><a href="about.html" class="drawer-link ' + (isAbout ? 'active' : '') + '" data-track="nav_click">About Us</a></li>' +
-                '<li class="drawer-accordion-group">' +
-                  '<button type="button" class="drawer-accordion-btn ' + (isProducts ? 'active' : '') + '" id="drawer-products-btn" aria-expanded="false">' +
-                    'All Products' +
-                    '<svg class="icon-caret" viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>' +
-                  '</button>' +
-                  '<ul class="drawer-sublinks-list" id="drawer-products-sublist">' +
-                    '<li><a href="products.html" class="drawer-sublink" data-track="category_click" data-category="all">Explore All Catalog</a></li>' +
-                    '<li><a href="home-gadgets.html" class="drawer-sublink" data-track="category_click" data-category="home-gadgets">Home &amp; Gadgets</a></li>' +
-                    '<li><a href="skin-care-tools.html" class="drawer-sublink" data-track="category_click" data-category="skin-care-tools">Skin Care Tools</a></li>' +
-                    '<li><a href="hair-care-tools.html" class="drawer-sublink" data-track="category_click" data-category="hair-care-tools">Hair Care Tools</a></li>' +
-                    '<li><a href="self-care-wellness.html" class="drawer-sublink" data-track="category_click" data-category="self-care-wellness">Self-Care &amp; Wellness</a></li>' +
-                  '</ul>' +
-                '</li>' +
-                '<li><a href="contact.html" class="drawer-link ' + (isContact ? 'active' : '') + '" data-track="nav_click">Contact Us</a></li>' +
-                '<li><a href="faq.html" class="drawer-link ' + (isFaq ? 'active' : '') + '" data-track="nav_click">FAQ</a></li>' +
-                '<li><a href="signin.html" class="drawer-link ' + (isSignin ? 'active' : '') + '" id="drawer-signin" data-track="nav_click">Sign In</a></li>' +
-              '</ul>' +
-            '</nav>' +
-          '</div>' +
+                '<ul class="drawer-sublinks-list" id="drawer-products-sublist">' +
+                  '<li><a href="products.html" class="drawer-sublink" data-track="category_click" data-category="all">Explore All Catalog</a></li>' +
+                  '<li><a href="home-gadgets.html" class="drawer-sublink" data-track="category_click" data-category="home-gadgets">Home &amp; Gadgets</a></li>' +
+                  '<li><a href="skin-care-tools.html" class="drawer-sublink" data-track="category_click" data-category="skin-care-tools">Skin Care Tools</a></li>' +
+                  '<li><a href="hair-care-tools.html" class="drawer-sublink" data-track="category_click" data-category="hair-care-tools">Hair Care Tools</a></li>' +
+                  '<li><a href="self-care-wellness.html" class="drawer-sublink" data-track="category_click" data-category="self-care-wellness">Self-Care &amp; Wellness</a></li>' +
+                '</ul>' +
+              '</li>' +
+              '<li><a href="contact.html" class="drawer-link ' + (isContact ? 'active' : '') + '" data-track="nav_click">Contact Us</a></li>' +
+              '<li><a href="faq.html" class="drawer-link ' + (isFaq ? 'active' : '') + '" data-track="nav_click">FAQ</a></li>' +
+              '<li><a href="signin.html" class="drawer-link ' + (isSignin ? 'active' : '') + '" id="drawer-signin" data-track="nav_click">Sign In</a></li>' +
+            '</ul>' +
+          '</nav>' +
         '</div>' +
       '</div>' +
-    '</header>';
+    '</div>';
 
     headerEl.innerHTML = html;
     setupHeaderEvents();
@@ -165,7 +165,7 @@
         overlay.classList.add('open');
         document.body.style.overflow = 'hidden';
         if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
-        var firstFocusable = drawer.querySelector('button, input, a');
+        var firstFocusable = drawer ? drawer.querySelector('button, input, a') : null;
         if (firstFocusable) firstFocusable.focus();
       }
     }
@@ -188,6 +188,14 @@
       });
     }
 
+    // Delegated click as reliable touch / dynamic fallback
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('#nav-hamburger')) {
+        e.preventDefault();
+        openDrawer();
+      }
+    });
+
     if (closeBtn) {
       closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -208,6 +216,7 @@
         e.preventDefault();
         var isOpen = accordionList.classList.toggle('open');
         accordionBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        accordionBtn.classList.toggle('active', isOpen);
       });
     }
 
