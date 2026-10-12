@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
+  <url>
+    <loc>https://16mart.store/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://16mart.store/images/web-banner-1.jpg</image:loc>
+      <image:title>SIXTEEN MART — Always More Value</image:title>
+      <image:caption>Affordable, functional and trendy lifestyle products carefully selected for everyday convenience</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/home&amp;gadget.jpg</image:loc>
+      <image:title>Home and Gadgets Collection</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/skincare.jpg</image:loc>
+      <image:title>Skin Care Tools Collection</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/Hair_care.jpg</image:loc>
+      <image:title>Hair Care Tools Collection</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/selfcare.jpg</image:loc>
+      <image:title>Self-Care and Wellness Collection</image:title>
+    </image:image>
+  </url>
+
+  <!-- All Products Catalog -->
+  <url>
+    <loc>https://16mart.store/products.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://16mart.store/images/milk-frother-1.jpg</image:loc>
+      <image:title>Electric Handheld Milk Frother</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/thermal-printer-1.jpg</image:loc>
+      <image:title>Mini Portable Thermal Pocket Printer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/juice-blender-1.jpg</image:loc>
+      <image:title>Portable USB Rechargeable Juice Blender</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/jade-roller-1.jpg</image:loc>
+      <image:title>Natural Jade Roller &amp; Gua Sha Facial Set</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/derma-roller-1.png</image:loc>
+      <image:title>540 Micro-Needle Derma Roller (0.5mm)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/derma-suction-1.png</image:loc>
+      <image:title>Electric Blackhead Pore Vacuum Derma Suction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/hot-air-styler-1.jpg</image:loc>
+      <image:title>5-in-1 Electric Hot Air Brush &amp; Hair Styler</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/spa-socks-1.jpg</image:loc>
+      <image:title>Moisturizing Gel Spa Socks &amp; Gloves Duo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/aroma-diffuser-1.jpg</image:loc>
+      <image:title>Ultrasonic Essential Oil Flame Aroma Diffuser</image:title>
+    </image:image>
+  </url>
+
+  <!-- Category: Home & Gadgets -->
+  <url>
+    <loc>https://16mart.store/home-gadgets.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://16mart.store/images/home&amp;gadget.jpg</image:loc>
+      <image:title>Home and Gadgets Category Banner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/milk-frother-1.jpg</image:loc>
+      <image:title>Electric Handheld Milk Frother</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/thermal-printer-1.jpg</image:loc>
+      <image:title>Mini Portable Thermal Pocket Printer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/juice-blender-1.jpg</image:loc>
+      <image:title>Portable USB Rechargeable Juice Blender</image:title>
+    </image:image>
+  </url>
+
+  <!-- Category: Skin Care Tools -->
+  <url>
+    <loc>https://16mart.store/skin-care-tools.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://16mart.store/images/skincare.jpg</image:loc>
+      <image:title>Skin Care Tools Category Banner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/jade-roller-1.jpg</image:loc>
+      <image:title>Natural Jade Roller &amp; Gua Sha Facial Set</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/derma-roller-1.png</image:loc>
+      <image:title>540 Micro-Needle Derma Roller (0.5mm)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/derma-suction-1.png</image:loc>
+      <image:title>Electric Blackhead Pore Vacuum Derma Suction</image:title>
+    </image:image>
+  </url>
+
+  <!-- Category: Hair Care Tools -->
+  <url>
+    <loc>https://16mart.store/hair-care-tools.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://16mart.store/images/Hair_care.jpg</image:loc>
+      <image:title>Hair Care Tools Category Banner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/hot-air-styler-1.jpg</image:loc>
+      <image:title>5-in-1 Electric Hot Air Brush &amp; Hair Styler</image:title>
+    </image:image>
+  </url>
+
+  <!-- Category: Self-Care & Wellness -->
+  <url>
+    <loc>https://16mart.store/self-care-wellness.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://16mart.store/images/selfcare.jpg</image:loc>
+      <image:title>Self-Care and Wellness Category Banner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/spa-socks-1.jpg</image:loc>
+      <image:title>Moisturizing Gel Spa Socks &amp; Gloves Duo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/aroma-diffuser-1.jpg</image:loc>
+      <image:title>Ultrasonic Essential Oil Flame Aroma Diffuser</image:title>
+    </image:image>
+  </url>
+
+  <!-- Informational Pages -->
+  <url>
+    <loc>https://16mart.store/about.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://16mart.store/contact.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://16mart.store/faq.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
