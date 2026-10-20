@@ -33,7 +33,7 @@
   <!-- All Products Catalog -->
   <url>
     <loc>https://16mart.store/products.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -72,6 +72,14 @@
       <image:loc>https://16mart.store/images/aroma-diffuser-1.jpg</image:loc>
       <image:title>Ultrasonic Essential Oil Flame Aroma Diffuser</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/Trimmer.png</image:loc>
+      <image:title>Electric Hair &amp; Beard Precision Trimmer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/face_massger.jpg</image:loc>
+      <image:title>Electric Facial Massager &amp; Skin Sculptor</image:title>
+    </image:image>
   </url>
 
   <!-- Category: Home & Gadgets -->
@@ -101,7 +109,7 @@
   <!-- Category: Skin Care Tools -->
   <url>
     <loc>https://16mart.store/skin-care-tools.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -120,12 +128,16 @@
       <image:loc>https://16mart.store/images/derma-suction-1.png</image:loc>
       <image:title>Electric Blackhead Pore Vacuum Derma Suction</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/face_massger.jpg</image:loc>
+      <image:title>Electric Facial Massager &amp; Skin Sculptor</image:title>
+    </image:image>
   </url>
 
   <!-- Category: Hair Care Tools -->
   <url>
     <loc>https://16mart.store/hair-care-tools.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -135,6 +147,10 @@
     <image:image>
       <image:loc>https://16mart.store/images/hot-air-styler-1.jpg</image:loc>
       <image:title>5-in-1 Electric Hot Air Brush &amp; Hair Styler</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://16mart.store/images/Trimmer.png</image:loc>
+      <image:title>Electric Hair &amp; Beard Precision Trimmer</image:title>
     </image:image>
   </url>
 
