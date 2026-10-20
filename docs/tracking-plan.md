@@ -98,4 +98,6 @@ Tracking is implemented using vanilla JavaScript via `js/analytics.js` pushing s
 | `16M-SC-002` | Face Vacuum Pore Cleanser (Derma Suction) | `skin-care-tools` | Rs. 1,500 | Regular |
 | `16M-SC-003` | Derma Roller Micro-Needle System | `skin-care-tools` | Rs. 750 | Regular |
 | `16M-HC-001` | 5-in-1 Hot Air Styler Hair Dryer Curling Wand Set | `hair-care-tools` | Rs. 4,990 | Regular |
+| `16M-HC-002` | Electric Hair & Beard Precision Trimmer | `hair-care-tools` | Rs. 799 | Regular |
 | `16M-SW-001` | Moisturizing Pink Spa Gel Socks | `self-care-wellness` | Rs. 1,290 | Regular |
+| `16M-SC-004` | Electric Facial Massager & Skin Sculptor | `skin-care-tools` | Rs. 890 | Regular |

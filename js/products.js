@@ -121,6 +121,16 @@
 
     container.innerHTML = html;
 
+    // Update count labels if present
+    var catCountEl = document.getElementById('category-products-count');
+    if (catCountEl && location === 'category-page' && products) {
+      catCountEl.textContent = 'Showing ' + products.length + (products.length === 1 ? ' product' : ' products');
+    }
+    var catalogCountEl = document.getElementById('catalog-products-count');
+    if (catalogCountEl && location === 'all-products' && products && window.PRODUCTS) {
+      catalogCountEl.textContent = 'Showing ' + products.length + ' of ' + window.PRODUCTS.length + ' products';
+    }
+
     // Track view_item_list
     if (window.trackViewItemList) {
       window.trackViewItemList(listName || 'Catalog', products);

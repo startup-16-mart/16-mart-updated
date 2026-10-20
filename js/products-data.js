@@ -111,6 +111,30 @@ const PRODUCTS = [
     description: "Pamper tired, dry feet with these reusable spa gel socks. Lined with nutrient-rich botanical gel infused with Vitamin E, olive oil, and jojoba oil, they lock in moisture to heal cracked heels and restore silky soft skin during sleep or relaxation.",
     badge: "Best Value",
     maxQty: 5
+  },
+  {
+    id: "16M-HC-002",
+    name: "Electric Hair & Beard Precision Trimmer",
+    categoryId: "hair-care-tools",
+    price: 799,
+    image: "images/Trimmer.png",
+    gallery: ["images/Trimmer.png"],
+    shortDescription: "Rechargeable high-precision hair and beard trimmer with stainless steel blades for sharp lines, detailing, and daily grooming.",
+    description: "Achieve crisp lines and effortless personal grooming at home with this rechargeable precision hair and beard trimmer. Engineered with ultra-sharp stainless steel T-blades, a durable high-speed motor, and an ergonomic grip, it delivers smooth, snag-free trims for beards, mustaches, sideburns, and necklines.",
+    badge: "New Arrival",
+    maxQty: 5
+  },
+  {
+    id: "16M-SC-004",
+    name: "Electric Facial Massager & Skin Sculptor",
+    categoryId: "skin-care-tools",
+    price: 890,
+    image: "images/face_massger.jpg",
+    gallery: ["images/face_massger.jpg"],
+    shortDescription: "Ergonomic handheld electric facial massager designed to relieve facial tension, stimulate circulation, and tone jawline contours.",
+    description: "Elevate your daily skincare routine with this ergonomic electric facial massager. Designed to stimulate facial blood circulation, soothe tense facial muscles, and enhance serum and cream absorption, this compact toning device helps sculpt jawlines and revitalize tired skin with gentle, relaxing massage.",
+    badge: "New Arrival",
+    maxQty: 5
   }
 ];
 
